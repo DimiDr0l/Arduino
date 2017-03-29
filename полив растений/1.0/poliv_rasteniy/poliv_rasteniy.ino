@@ -11,13 +11,13 @@ RF24 radio(8, 9);
 const uint64_t pipe = 0xF0F0F0F000LL;
 RTC_DS1307 RTC;
 LiquidCrystal_I2C lcd(0x27,16,2);  // дисплей подключить к А4 А5
-DHT dht(7, DHT22);    // датчик темп и влажности воздуха подключается к D7
-#define pullPin 8   //нога дергания датчика влажности
-#define humPin  A7    // нога датчика влажности земли
-#define waterPin 2    //нога насоса
-#define airPin 3    //нога вытяжки
-#define heatPin 4   //нога обогревателя
-#define lightPin 6    //нога освещения PWM
+DHT dht(7, DHT22);    //датчик темп и влажности воздуха подключается к D7
+#define pullPin 8   //pin дергания датчика влажности
+#define humPin  A7    // pin датчика влажности земли
+#define waterPin 2    //pin насоса
+#define airPin 3    //pin вытяжки
+#define heatPin 4   //pin обогревателя
+#define lightPin 6    //pin освещения PWM
 #define ledPin 5    //светодиод работы насоса
 #define buttonUp      A3  //кнопки
 #define buttonDown    A2
@@ -50,15 +50,15 @@ char data[ch_len];
 
 void setup() {
   Serial.begin(115200);
-  pinMode (buttonUp, INPUT_PULLUP); //нога кнопки для смены экрана меню
+  pinMode (buttonUp, INPUT_PULLUP); //pin кнопки для смены экрана меню
   pinMode (buttonDown, INPUT_PULLUP);
   pinMode (buttonLeft, INPUT_PULLUP);
   pinMode (buttonRight, INPUT_PULLUP);
 
-  pinMode (humPin, INPUT);  //нога считывания влажности земли
-  pinMode(pullPin, OUTPUT);   //нога дергания датчика влажности
-  pinMode(heatPin, OUTPUT); //нога обогревателя
-  pinMode(waterPin, OUTPUT);  //нога насоса
+  pinMode (humPin, INPUT);  //pin считывания влажности земли
+  pinMode(pullPin, OUTPUT);   //pin дергания датчика влажности
+  pinMode(heatPin, OUTPUT); //pin обогревателя
+  pinMode(waterPin, OUTPUT);  //pin насоса
   pinMode(ledPin, OUTPUT);  //светодиод работы насоса
   pinMode(lightPin, OUTPUT); //освещение
   pinMode(airPin, OUTPUT);  //вытяжка
