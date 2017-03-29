@@ -1,0 +1,36 @@
+#system-message {
+	padding: 0px; margin-bottom: 10px;
+}
+#system-message > dt {
+	font-weight: bold; display: none;
+}
+#system-message > dd {
+	margin: 0px; text-indent: 30px; font-weight: bold;
+}
+#system-message > dd > ul {
+	background-position: 4px top; list-style: none; padding: 10px; color: rgb(0, 85, 187); margin-bottom: 10px; border-top-color: rgb(132, 167, 219); border-bottom-color: rgb(132, 167, 219); border-top-width: 3px; border-bottom-width: 3px; border-top-style: solid; border-bottom-style: solid; background-repeat: no-repeat;
+}
+#system-message > dd > ul > li {
+	line-height: 1.5em;
+}
+#system-message > .message > ul {
+	background-image: url("../images/notice-info.png"); background-color: rgb(195, 210, 229);
+}
+#system-message > .error > ul {
+	color: rgb(204, 0, 0);
+}
+#system-message > .warning > ul {
+	color: rgb(204, 0, 0);
+}
+#system-message > .notice > ul {
+	color: rgb(204, 0, 0);
+}
+#system-message > .error > ul {
+	border-color: rgb(222, 122, 123); background-image: url("../images/notice-alert.png"); background-color: rgb(230, 192, 192);
+}
+#system-message > .warning > ul {
+	border-color: rgb(255, 187, 0); background-image: url("../images/notice-note.png"); background-color: rgb(230, 200, 166);
+}
+#system-message > .notice > ul {
+	border-color: rgb(240, 220, 126); background-image: url("../images/notice-note.png"); background-color: rgb(239, 231, 184);
+}

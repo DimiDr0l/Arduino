@@ -1,0 +1,216 @@
+.yuimenu {
+	left: -999em; top: -999em;
+}
+.yuimenubar {
+	position: static;
+}
+.yuimenu .yuimenu {
+	position: absolute;
+}
+.yuimenubar .yuimenu {
+	position: absolute;
+}
+.yuimenubar li {
+	list-style-type: none;
+}
+.yuimenu li {
+	list-style-type: none;
+}
+.yuimenubar ul {
+	margin: 0px; padding: 0px;
+}
+.yuimenu ul {
+	margin: 0px; padding: 0px;
+}
+.yuimenubar li {
+	margin: 0px; padding: 0px;
+}
+.yuimenu li {
+	margin: 0px; padding: 0px;
+}
+.yuimenu h6 {
+	margin: 0px; padding: 0px;
+}
+.yuimenubar h6 {
+	margin: 0px; padding: 0px;
+}
+.yuimenuitemlabel {
+	text-align: left; white-space: nowrap;
+}
+.yuimenubaritemlabel {
+	text-align: left; white-space: nowrap;
+}
+.yuimenubar ul {
+	
+}
+.yuimenubar .yuimenu ul {
+	
+}
+.yuimenubar > ul::after {
+	height: 0px; line-height: 0; clear: both; display: block; visibility: hidden; content: ".";
+}
+.yuimenubaritem {
+	float: left;
+}
+.yuimenubaritemlabel {
+	display: block;
+}
+.yuimenuitemlabel {
+	display: block;
+}
+.yuimenuitemlabel .helptext {
+	margin: -1em 0px 0px 10em; font-style: normal; display: block;
+}
+.yui-menu-shadow {
+	visibility: hidden; position: absolute; z-index: -1;
+}
+.yui-menu-shadow-visible {
+	left: -3px; top: 2px; right: -3px; bottom: -3px; visibility: visible;
+}
+.hide-scrollbars * {
+	overflow: hidden;
+}
+.hide-scrollbars select {
+	display: none;
+}
+.show-scrollbars.yuimenu {
+	overflow: visible;
+}
+.show-scrollbars.yuimenubar {
+	overflow: visible;
+}
+.hide-scrollbars.yuimenu .yui-menu-shadow {
+	overflow: hidden;
+}
+.hide-scrollbars.yuimenubar .yui-menu-shadow {
+	overflow: hidden;
+}
+.show-scrollbars.yuimenu .yui-menu-shadow {
+	overflow: auto;
+}
+.show-scrollbars.yuimenubar .yui-menu-shadow {
+	overflow: auto;
+}
+.yui-force-redraw.yui-overlay {
+	margin-bottom: 1px;
+}
+.yui-skin-sam .yuimenubar {
+	background: url("sprite.png") repeat-x 0px 0px; line-height: 2; font-size: 93%;
+}
+.yui-skin-sam .yuimenubarnav .yuimenubaritem {
+	border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid;
+}
+.yui-skin-sam .yuimenubaritemlabel {
+	border-width: 1px 0px; border-style: solid; margin: -1px 0px; padding: 0px 10px; color: rgb(0, 0, 0); text-decoration: none; cursor: default;
+}
+.yui-skin-sam .yuimenubarnav .yuimenubaritemlabel {
+	background: -ms-linear-gradient(rgb(47, 13, 9) 0px, rgb(213, 59, 42) 49%, rgb(247, 216, 212) 100%) no-repeat; margin: 0px auto; padding: 0px 12px; border-radius: 6px 6px 0px 0px; height: 31px; color: rgb(6, 42, 50); line-height: 31px; display: block; cursor: pointer;
+}
+.yui-skin-sam .yuimenubarnav .yuimenubaritemlabel-hassubmenu {
+	background: -ms-linear-gradient(rgb(47, 13, 9) 0px, rgb(213, 59, 42) 49%, rgb(247, 216, 212) 100%) no-repeat;
+}
+.yui-skin-sam .yuimenubaritem-selected {
+	background: url("sprite.png") repeat-x 0px -1700px;
+}
+.yui-skin-sam .yuimenubaritem-active {
+	background: url("sprite.png") repeat-x 0px -1700px;
+}
+.yui-skin-sam .yuimenubaritemlabel-selected {
+	border-color: rgb(125, 152, 184);
+}
+.yui-skin-sam .yuimenubaritemlabel-active {
+	border-color: rgb(125, 152, 184);
+}
+.yui-skin-sam .yuimenubarnav .yuimenubaritemlabel-selected {
+	margin-left: -1px; border-left-width: 1px;
+}
+.yui-skin-sam .yuimenubarnav .yuimenubaritemlabel-active {
+	margin-left: -1px; border-left-width: 1px;
+}
+.yui-skin-sam .yuimenubaritemlabel-disabled {
+	color: rgb(166, 166, 166); cursor: default;
+}
+.yui-skin-sam .yuimenubarnav .yuimenubaritemlabel-hassubmenu-disabled {
+	background-image: url("menubaritem_submenuindicator_disabled.png");
+}
+.yui-skin-sam .yuimenu {
+	line-height: 1.5; font-size: 93%;
+}
+.yui-skin-sam .yuimenubar .yuimenu {
+	font-size: 100%;
+}
+.yui-skin-sam .yuimenu .yuimenu {
+	font-size: 100%;
+}
+.yui-skin-sam .yuimenu .bd {
+	border: 1px solid rgb(128, 128, 128); border-image: none; background-color: rgb(255, 255, 255); _zoom: normal;
+}
+.yui-skin-sam .yuimenu .yuimenu .bd {
+	
+}
+.yui-skin-sam .yuimenu ul {
+	border-width: 1px 0px 0px; border-style: solid; border-color: rgb(204, 204, 204); padding: 3px 0px;
+}
+.yui-skin-sam .yuimenu ul.first-of-type {
+	background: -ms-linear-gradient(rgb(247, 216, 212) 0px, rgb(247, 216, 212) 49%, rgb(247, 216, 212) 100%) no-repeat;
+}
+.yui-skin-sam .yuimenu h6 {
+	border-width: 1px 0px 0px; border-style: solid; border-color: rgb(204, 204, 204); padding: 3px 10px 0px; color: rgb(164, 164, 164); font-weight: bold;
+}
+.yui-skin-sam .yuimenu ul.hastitle {
+	border-width: 0px;
+}
+.yui-skin-sam .yuimenu h6.first-of-type {
+	border-width: 0px;
+}
+.yui-skin-sam .yuimenu .yui-menu-body-scrolled {
+	border-color: rgb(204, 204, 204) rgb(128, 128, 128); overflow: hidden;
+}
+.yui-skin-sam .yuimenu .topscrollbar {
+	background: url("sprite.png") no-repeat 0px 0px rgb(255, 255, 255); border: 1px solid rgb(128, 128, 128); border-image: none; height: 16px;
+}
+.yui-skin-sam .yuimenu .bottomscrollbar {
+	background: url("sprite.png") no-repeat 0px 0px rgb(255, 255, 255); border: 1px solid rgb(128, 128, 128); border-image: none; height: 16px;
+}
+.yui-skin-sam .yuimenu .topscrollbar {
+	background-position: center -950px; border-bottom-width: 0px;
+}
+.yui-skin-sam .yuimenu .topscrollbar_disabled {
+	background-position: center -975px;
+}
+.yui-skin-sam .yuimenu .bottomscrollbar {
+	background-position: center -850px; border-top-width: 0px;
+}
+.yui-skin-sam .yuimenu .bottomscrollbar_disabled {
+	background-position: center -875px;
+}
+.yui-skin-sam .yuimenuitem {
+	_border-bottom: solid 1px #fff;
+}
+.yui-skin-sam .yuimenuitemlabel {
+	padding: 0px 20px; color: rgb(0, 0, 0); text-decoration: none; cursor: default;
+}
+.yui-skin-sam .yuimenuitem-hassubmenu {
+	background-position: right; background-image: url("menuitem_submenuindicator.png"); background-repeat: no-repeat;
+}
+.yui-skin-sam .yuimenuitem-checked {
+	background-position: left; background-image: url("menuitem_checkbox.png"); background-repeat: no-repeat;
+}
+.yui-skin-sam .yui-menu-shadow-visible {
+	opacity: 0.12; background-color: rgb(0, 0, 0);
+}
+.yui-skin-sam .yuimenuitem-selected {
+	background-color: rgb(179, 212, 255);
+}
+.yui-skin-sam .yuimenuitem-active {
+	background-color: rgb(179, 212, 255);
+}
+.yui-skin-sam .yuimenuitemlabel-disabled {
+	color: rgb(166, 166, 166); cursor: default;
+}
+.yui-skin-sam .yuimenuitem-hassubmenu-disabled {
+	background-image: url("menuitem_submenuindicator_disabled.png");
+}
+.yui-skin-sam .yuimenuitem-checked-disabled {
+	background-image: url("menuitem_checkbox_disabled.png");
+}

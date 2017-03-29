@@ -1,0 +1,210 @@
+.b-widget-button .b-button {
+	background-position: 0px -259px; margin: 2px 3px 4px; border-radius: 5px; height: 48px; box-shadow: 0px 1px 3px #999;
+}
+.b-widget-button .b-button {
+	background-image: url("/img/b-widget-button__sprite.png"); background-attachment: scroll; background-repeat: repeat-x; background-origin: padding-box; background-clip: border-box; background-color: transparent;
+}
+.b-widget-button .b-button .b-button__inner {
+	background-image: url("/img/b-widget-button__sprite.png"); background-attachment: scroll; background-repeat: repeat-x; background-origin: padding-box; background-clip: border-box; background-color: transparent;
+}
+.b-widget-button .b-button .b-button__inner {
+	background-position: 0px -36px; border-width: medium medium medium 1px; border-style: none none none solid; padding: 0px 25px; border-radius: 0px 5px 5px 0px; height: 100%; color: rgb(255, 255, 255); line-height: 47px; font-size: 25px; margin-left: 60px; border-left-color: rgb(239, 96, 33); text-shadow: -1px -1px 1px #f16a2a; -moz-border-bottom-colors: none; -moz-border-image: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none;
+}
+.b-widget-button .b-button:active {
+	box-shadow: inset 0px 1px 4px rgba(0,0,0,0.3);
+}
+.b-widget-button .b-button:active .b-button__inner {
+	box-shadow: inset 0px 1px 4px rgba(0,0,0,0.3);
+}
+.b-widget-button__icon {
+	top: 50%; height: 29px; margin-top: -15px; position: absolute;
+}
+.b-widget-button__icon_type_yamoney {
+	left: 16px;
+}
+.b-widget-button__icon_type_any-card {
+	left: 12px;
+}
+.b-widget-button__icon_type_mobile {
+	left: 23px;
+}
+.b-widget-button_black .b-button .b-button__inner {
+	background-position: 0px -132px; border-left-color: rgb(0, 0, 0); border-left-width: 1px; border-left-style: solid; text-shadow: -1px -1px 1px #1e1e1e; background-image: url("/img/b-widget-button__sprite.png");
+}
+.b-widget-button_orange .b-button .b-button__inner {
+	color: rgb(0, 0, 0); border-left-color: rgb(230, 200, 68); border-left-width: 1px; border-left-style: solid; text-shadow: 0px 1px 1px rgba(255,255,255,0.1);
+}
+.b-widget-button_white .b-button .b-button__inner {
+	background-position: 0px; color: rgb(0, 0, 0); border-bottom-color: currentColor; border-left-color: currentColor; border-bottom-width: medium; border-left-width: medium; border-bottom-style: none; border-left-style: none; text-shadow: -1px -1px 1px #e7e7e7; background-image: url("/img/b-widget-button__inner_white.png"); background-attachment: scroll; background-repeat: no-repeat; background-origin: padding-box; background-clip: border-box; background-color: transparent;
+}
+.b-widget-button_m .b-button {
+	border-radius: 4px; height: 36px;
+}
+.b-widget-button_m .b-button .b-button__inner {
+	padding: 0px 20px; border-radius: 0px 4px 4px 0px; line-height: 36px; font-size: 20px; margin-left: 50px;
+}
+.b-widget-button_m .b-button .b-widget-button__icon {
+	left: 14px; height: 22px; margin-top: -11px;
+}
+.b-widget-button_m .b-button .b-widget-button__icon_type_mobile {
+	left: 20px;
+}
+.b-widget-button_s .b-button {
+	border-radius: 3px; height: 25px;
+}
+.b-widget-button_s .b-button .b-button__inner {
+	padding: 0px 15px; border-radius: 0px 3px 3px 0px; line-height: 24px; font-size: 13px; margin-left: 35px;
+}
+.b-widget-button_s .b-button .b-widget-button__icon {
+	left: 10px; height: 16px; margin-top: -8px;
+}
+.b-widget-button_s .b-button .b-widget-button__icon_type_mobile {
+	left: 13px;
+}
+html {
+	height: 100%;
+}
+body {
+	font-family: Arial,Geneva CY,Sans-Serif;
+}
+a {
+	color: rgb(0, 89, 209);
+}
+a:hover {
+	color: rgb(255, 115, 0);
+}
+div {
+	margin: 0px; padding: 0px;
+}
+li {
+	margin: 0px; padding: 0px;
+}
+span {
+	margin: 0px; padding: 0px;
+}
+b {
+	margin: 0px; padding: 0px;
+}
+a {
+	margin: 0px; padding: 0px;
+}
+ul {
+	margin: 0px; padding: 0px;
+}
+ol {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px;
+}
+h1 {
+	margin: 0px;
+}
+h2 {
+	margin: 0px;
+}
+h3 {
+	margin: 0px; padding: 0px;
+}
+h4 {
+	margin: 0px; padding: 0px;
+}
+h5 {
+	margin: 0px; padding: 0px;
+}
+h6 {
+	margin: 0px; padding: 0px;
+}
+dl {
+	margin: 0px; padding: 0px;
+}
+dd {
+	margin: 0px; padding: 0px;
+}
+dt {
+	margin: 0px; padding: 0px;
+}
+form {
+	margin: 0px; padding: 0px;
+}
+fieldset {
+	margin: 0px; padding: 0px;
+}
+i {
+	margin: 0px; padding: 0px;
+}
+button {
+	margin: 0px; padding: 0px;
+}
+td {
+	margin: 0px; padding: 0px;
+}
+th {
+	margin: 0px; padding: 0px;
+}
+table {
+	border-collapse: collapse;
+}
+h1 {
+	padding: 0px 0px 20px; font-size: 24px;
+}
+h1 {
+	font-weight: 400;
+}
+h2 {
+	font-weight: 400;
+}
+h2 {
+	padding: 0px 0px 15px; color: rgb(65, 65, 65); font-size: 18px;
+}
+p {
+	padding: 0px 0px 10px;
+}
+span.ym-simple-tip-block {
+	position: static;
+}
+.b-button {
+	background: 0px 0px; margin: 0px 15px 0px 0px; padding: 0px; border: currentColor; border-image: none; height: 25px; color: rgb(0, 0, 0); text-decoration: none; vertical-align: middle; display: inline-block; position: relative; cursor: pointer;
+}
+.b-button__input {
+	padding: 0px; border: 0px currentColor; border-image: none; left: 0px; top: 0px; width: 100%; height: 100%; line-height: 0; text-indent: -999px; font-size: 0px; position: absolute; cursor: pointer; opacity: 0;
+}
+.b-button__inner {
+	background: url("/img/b-widget-button__sprite.png") repeat-x 0px -228px rgb(255, 255, 255); margin: 0px; padding: 0px 15px; border-radius: 3px; border: 1px solid rgb(180, 180, 180); border-image: none; height: 23px; line-height: 23px; font-family: Arial,Geneva CY,Sans-Serif; font-size: 13px; display: block; white-space: nowrap; position: relative;
+}
+.b-button__inner .b-icon {
+	margin: -1px 10px 0px -10px;
+}
+.b-button__inner .b-icon_right {
+	margin: -1px -10px 0px 10px;
+}
+.b-button:active .b-button__inner {
+	box-shadow: inset 0px 1px 2px #888;
+}
+.b-button_disabled {
+	cursor: default; opacity: 0.5;
+}
+.b-button_disabled .b-button__input {
+	display: none;
+}
+.b-button_disabled:active .b-button__inner {
+	box-shadow: none;
+}
+.b-button_1 {
+	height: 32px;
+}
+.b-button_1 .b-button__inner {
+	height: 30px; line-height: 30px; font-size: 16px;
+}
+.b-button_1 .b-button__inner .b-icon {
+	margin-top: -2px;
+}
+body {
+	margin: 0px; padding: 0px; overflow: hidden;
+}
+html {
+	margin: 0px; padding: 0px; overflow: hidden;
+}
+body {
+	background-color: transparent;
+}

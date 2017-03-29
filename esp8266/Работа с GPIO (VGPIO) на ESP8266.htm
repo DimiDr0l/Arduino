@@ -1,0 +1,607 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0097)http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/66-rabota-s-gpio-vgpio-na-esp8266 -->
+<!DOCTYPE html PUBLIC "" ""><HTML lang="ru-ru" dir="ltr"><HEAD><META 
+content="IE=11.0000" http-equiv="X-UA-Compatible">
+       
+<META http-equiv="content-type" content="text/html; charset=utf-8">   
+<META name="keywords" content="ESP8266, gpio">   
+<META name="rights" content="MaksMS">   
+<META name="author" content="MaksMS">   
+<META name="description" content="ESP8266,gpio">   
+<META name="GENERATOR" content="MSHTML 11.00.9600.18231">   <TITLE>Работа с GPIO 
+(VGPIO) на ESP8266</TITLE>   <LINK href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"> 
+  <LINK href="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/slimbox.css" rel="stylesheet" 
+type="text/css" media="screen">   <LINK href="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/kunenasearch.css" 
+rel="stylesheet" type="text/css">   <LINK href="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/menu.css" 
+rel="stylesheet" type="text/css">   
+<STYLE type="text/css">
+#ariyui93 A{font-size: 14px !important; font-weight: normal !important; text-transform: none !important;}
+  </STYLE>
+   
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/mootools-core.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/core.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/caption.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/mootools-more.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/slimbox.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/yui.combo.js" type="text/javascript"></SCRIPT>
+   
+<SCRIPT type="text/javascript">
+window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});
+function keepAlive() {	var myAjax = new Request({method: "get", url: "index.php"}).send();} window.addEvent("domready", function(){ keepAlive.periodical(840000); });
+try { document.execCommand("BackgroundImageCache", false, true); } catch(e) {};
+YAHOO.util.Event.onContentReady("ariyui93_menu", function () { var oMenu = new YAHOO.widget.MenuBar("ariyui93_menu", {"lazyLoad":true,"autosubmenudisplay":true,"position":"static","hidedelay":750}); oMenu.render(); oMenu.show(); if (-1 > -1) oMenu.getItem(-1).cfg.setProperty("selected", true); });
+  </SCRIPT>
+   
+<META content="http://homes-smart.ru/cache/1/11b14486017537495298738fa8563fde.png" 
+property="og:image">   
+<META content="Домашняя автоматизация" property="og:site_name">   
+<META content="Работа с GPIO (VGPIO) на ESP8266" property="og:title">   
+<META content="article" property="og:type">   
+<META content="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/66-rabota-s-gpio-vgpio-na-esp8266" 
+property="og:url">   
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/plusone.js" type="text/javascript">{lang: 'ru'}</SCRIPT>
+       <LINK href="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/system(1).css" 
+rel="stylesheet">     <LINK href="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/general.css" 
+rel="stylesheet">     
+<META name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width"> 
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+    <LINK href="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/template.css" 
+rel="stylesheet" media="screen">     <!--[if lte IE 7]><link rel="stylesheet" href="/templates/abc/css/template.ie7.css" media="screen" /><![endif]--> 
+    <LINK href="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/template.responsive.css" 
+rel="stylesheet" media="all">     
+<SCRIPT>if ('undefined' != typeof jQuery) document._artxJQueryBackup = jQuery;</SCRIPT>
+     
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/jquery.js"></SCRIPT>
+     
+<SCRIPT>jQuery.noConflict();</SCRIPT>
+     
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/script.js"></SCRIPT>
+         
+<SCRIPT>if (document._artxJQueryBackup) jQuery = document._artxJQueryBackup;</SCRIPT>
+     
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/script.responsive.js"></SCRIPT>
+ </HEAD> 
+<BODY>
+<DIV id="art-main">
+<DIV class="art-sheet clearfix"><HEADER class="art-header">
+<DIV class="art-shapes"></DIV>
+<H1 class="art-headline" data-left="12.5%"><A href="http://homes-smart.ru/"></A> 
+</H1>
+<H2 class="art-slogan" data-left="5.06%"></H2></HEADER><NAV class="art-nav">
+<DIV class="yui-skin-sam" id="ariyui93">
+<DIV class="yuimenubar yuimenubarnav" id="ariyui93_menu">
+<DIV class="bd">
+<UL class="first-of-type">
+  <LI class="yuimenubaritem yuimenuitem-level-0 yuimenuitem-item101 first-of-type"><A 
+  class="yuimenubaritemlabel" href="http://homes-smart.ru/">Главная</A></LI>
+  <LI class="yuimenubaritem yuimenuitem-level-0 yuimenuitem-item102"><A class="yuimenubaritemlabel" 
+  href="http://homes-smart.ru/index.php/about-us">О проекте</A></LI>
+  <LI class="yuimenubaritem yuimenuitem-level-0 yuimenuitem-item134"><A class="yuimenubaritemlabel" 
+  href="http://homes-smart.ru/index.php/forumk">Форум</A></LI>
+  <LI class="yuimenubaritem yuimenuitem-level-0 yuimenuitem-parent yuimenuitem-item135 yuimenubaritem-selected"><A 
+  class="yuimenubaritemlabel yuimenubaritemlabel-selected" href="http://homes-smart.ru/index.php/oborudovanie">Железо</A>
+  <DIV class="yuimenu">
+  <DIV class="bd">
+  <UL>
+    <LI class="yuimenuitem yuimenuitem-level-1 yuimenuitem-parent yuimenuitem-item140"><A 
+    class="yuimenuitemlabel" href="http://homes-smart.ru/index.php/oborudovanie/arduino">Arduino</A>
+    <DIV class="yuimenu">
+    <DIV class="bd">
+    <UL>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item139"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/arduino/chto-takoe-arduino">Что 
+      такое аrduino ?</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item136"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/arduino/samodelnyj-kontroller-arduino">Контроллер 
+      arduino своими руками</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item167"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/arduino/chto-takoe-fyuzy-fuse">Что 
+      такое фьюзы ( Fuse ) ?</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item168"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/arduino/programmiruem-m-k-atmega-cherez-arduino">Программируем 
+      м/к Atmega через Arduino</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item170"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/arduino/dobavlyaem-podderzhku-ne-rodnykh-m-k-v-sredu-arduino-ide">Добавляем 
+      поддержку не родных м/к в среду Arduino IDE</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item171"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/arduino/proshivka-mikrokontrollerov-atmega-cherez-usbasp">Прошивка 
+      микроконтроллеров Atmega через USBasp</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item173"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/fusecalc/">Калькулятор fuse</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item182"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/arduino/avr-zagruzchik">Конструктор 
+      Bootloader`а для Arduino</A></LI></UL></DIV></DIV></LI>
+    <LI class="yuimenuitem yuimenuitem-level-1 yuimenuitem-parent yuimenuitem-item152"><A 
+    class="yuimenuitemlabel" href="http://homes-smart.ru/index.php/oborudovanie/energia">Energia</A>
+    <DIV class="yuimenu">
+    <DIV class="bd">
+    <UL>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item153"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/energia/chto-takoe-energia">Что 
+      такое Energia ?</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item151"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/energia/stellaris-launchpad">Stellaris 
+      LaunchPad</A></LI></UL></DIV></DIV></LI>
+    <LI class="yuimenuitem yuimenuitem-level-1 yuimenuitem-parent yuimenuitem-item158"><A 
+    class="yuimenuitemlabel" href="http://homes-smart.ru/index.php/oborudovanie/raspberry-pi">Raspberry 
+    Pi</A>
+    <DIV class="yuimenu">
+    <DIV class="bd">
+    <UL>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item160"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/raspberry-pi/azbuka-po-linux-sistemam">Азбука 
+      по Linux системам</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item166"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/raspberry-pi/rabota-s-gpio-i-datchikami">Работа 
+      с GPIO и датчиками</A></LI></UL></DIV></DIV></LI>
+    <LI class="yuimenuitem yuimenuitem-level-1 yuimenuitem-parent yuimenuitem-item141"><A 
+    class="yuimenuitemlabel" href="http://homes-smart.ru/index.php/oborudovanie/datchiki">Датчики</A>
+    <DIV class="yuimenu">
+    <DIV class="bd">
+    <UL>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item148"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/datchiki/ds18b20">Температурный 
+      датчик DS18B20</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item149"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/datchiki/datchiki-vlazhnosti-dht11-i-dht22">Датчики 
+      влажности DHT11 и DHT22</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item156"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/datchiki/datchik-davleniya-bmp085">Датчики 
+      давления BMP085 и BMP180</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item164"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/datchiki/datchik-dvizheniya">Датчик 
+      движения</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item165"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/datchiki/datchik-osveshchennosti-fotorezistor">Датчик 
+      освещенности (фоторезистор)</A></LI></UL></DIV></DIV></LI>
+    <LI class="yuimenuitem yuimenuitem-level-1 yuimenuitem-parent yuimenuitem-item146"><A 
+    class="yuimenuitemlabel" href="http://homes-smart.ru/index.php/oborudovanie/prochee">Прочее</A>
+    <DIV class="yuimenu">
+    <DIV class="bd">
+    <UL>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item154"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/prochee/ethernet-enc28j60">Ethernet 
+      ENC28J60</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item161"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/prochee/ethernet-w5100">Ethernet 
+      W5100</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item147"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/prochee/radiopult">Радиопульт</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item157"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/prochee/rasshiryaem-porty">Расширяем 
+      порты</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item162"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/prochee/bloki-rele">Блоки 
+      реле</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item163"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/prochee/tvertotelnye-rele">Твертотельные 
+      реле</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item174"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/prochee/i2c-usb-perekhodnik">I2C-USB 
+      переходник</A></LI></UL></DIV></DIV></LI>
+    <LI class="yuimenuitem yuimenuitem-level-1 yuimenuitem-parent yuimenuitem-item169"><A 
+    class="yuimenuitemlabel" href="http://homes-smart.ru/index.php/oborudovanie/uroki-i-primery">Уроки 
+    и примеры</A>
+    <DIV class="yuimenu">
+    <DIV class="bd">
+    <UL>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item172"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/uroki-i-primery/gpio-na-lyubom-kompyutere">GPIO 
+      на любом компьютере</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item175"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/uroki-i-primery/podklyuchaem-datchik-ds18b20-k-kompyuteru">Подключаем 
+      датчики DS18B20 к компьютеру</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item176"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/uroki-i-primery/ustanovka-usbasploader-na-platu-usbasp">Установка 
+      USBaspLoader на плату USBasp</A></LI></UL></DIV></DIV></LI>
+    <LI class="yuimenuitem yuimenuitem-level-1 yuimenuitem-parent yuimenuitem-item177"><A 
+    class="yuimenuitemlabel" href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-433-315mgts">Без 
+    проводов (433/315мгц)</A>
+    <DIV class="yuimenu">
+    <DIV class="bd">
+    <UL>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item180"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-433-315mgts/opisanie-radiomodulej-433mgts-i-315mgts">Описание 
+      радиомодулей 433мгц и 315мгц</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item181"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-433-315mgts/algoritm-peredachi-dannykh-v-vide-tsifrovogo-koda-na-radiomodulyakh">Алгоритм 
+      передачи данных в виде цифрового кода на радиомодулях</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item179"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-433-315mgts/besprovodnoj-datchik-temperatury-i-vlazhnosti-na-baze-radiomodulej-433-315">Беспроводной 
+      датчик температуры и влажности на базе радиомодулей 
+    433/315</A></LI></UL></DIV></DIV></LI>
+    <LI class="yuimenuitem yuimenuitem-level-1 yuimenuitem-parent yuimenuitem-item178"><A 
+    class="yuimenuitemlabel" href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-2-4-ggts">Без 
+    проводов (2.4 ггц)</A>
+    <DIV class="yuimenu">
+    <DIV class="bd">
+    <UL>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item183"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-2-4-ggts/opisanie-radiomodulya-nrf24l01">Описание 
+      радиомодуля nRF24L01+</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item184"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-2-4-ggts/nrf24l01-usb-iz-usbasp">nRF24L01+USB 
+      из USBasp</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item185"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-2-4-ggts/klient-dlya-usb-nrf24l01-besprovodnoj-datchik-vlazhnosti-arduino">Клиент 
+      на базе nRF24L01 - беспроводной датчик влажности (Arduino)</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item186"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-2-4-ggts/klient-dlya-usb-nrf24l01-besprovodnoj-datchik-vlazhnosti-si">Клиент 
+      на базе nRF24L01 - беспроводной датчик влажности (Си AVR)</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item187"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-2-4-ggts/nrf24le1-nrf24l01-mikrokontroller">nRF24LE1 
+      - nRF24L01 + микроконтроллер.</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item188"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-2-4-ggts/shlyuz-ethernet-nrf24l01-w5100-na-baze-arduino-dlya-obmena-dannymi-s-nrf24l01-i-nrf24le1">Шлюз 
+      Ethernet-nRF24L01 (W5100) на базе Arduino</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item190"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-2-4-ggts/konstruktor-besprovodnogo-klienta-na-nrf24le1">Конструктор 
+      прошивки беспроводного клиента на nRF24LE1</A></LI></UL></DIV></DIV></LI>
+    <LI class="yuimenuitem yuimenuitem-level-1 yuimenuitem-parent yuimenuitem-item191 yuimenuitem-selected"><A 
+    class="yuimenuitemlabel yuimenuitemlabel-selected" href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi">Без 
+    проводов (WI-FI)</A>
+    <DIV class="yuimenu">
+    <DIV class="bd">
+    <UL>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item192"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/sverkhdeshevyj-wi-fi-modul-esp8266">Сверхдешевый 
+      WI-FI модуль ESP8266</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item219"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/proekt-umnogo-modulya-na-baze-esp8266">Проект 
+      умного модуля на базе ESP8266</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item220"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/proshivka-i-zapusk-modulya-esp8266">Прошивка 
+      и запуск модуля ESP8266</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item221"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/otpravka-dannykh-na-web-server-majordomo-na-esp8266">Отправка 
+      данных на web сервер (MajorDoMo) на ESP8266</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item222"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/displei-na-esp8266">Дисплеи 
+      на ESP8266</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item223"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/led-matritsy-na-esp8266">LED 
+      матрицы на ESP8266</A></LI>
+      <LI class="yuimenuitem yuimenuitem-level-2 yuimenuitem-item224"><A class="yuimenuitemlabel" 
+      href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/tcp-klient-na-esp8266">TCP 
+      клиент на ESP8266</A></LI></UL></DIV></DIV></LI></UL></DIV></DIV></LI>
+  <LI class="yuimenubaritem yuimenuitem-level-0 yuimenuitem-item137"><A class="yuimenubaritemlabel" 
+  href="http://homes-smart.ru/index.php/soft">Софт</A></LI>
+  <LI class="yuimenubaritem yuimenuitem-level-0 yuimenuitem-item138"><A class="yuimenubaritemlabel" 
+  href="http://homes-smart.ru/index.php/gde-kupit">Где купить</A></LI>
+  <LI class="yuimenubaritem yuimenuitem-level-0 yuimenuitem-item189"><A class="yuimenubaritemlabel" 
+  href="http://homes-smart.ru/index.php/uslugi">Услуги</A></LI>
+  <LI class="yuimenubaritem yuimenuitem-level-0 yuimenuitem-item218"><A class="yuimenubaritemlabel" 
+  href="http://homes-smart.ru/index.php/irc-chat">IRC 
+чат</A></LI></UL></DIV></DIV></DIV></NAV>
+<DIV class="art-layout-wrapper">
+<DIV class="art-content-layout">
+<DIV class="art-content-layout-row">
+<DIV class="art-layout-cell art-sidebar1">
+<DIV class="art-block clearfix">
+<DIV class="art-blockcontent">
+<FORM id="login-form" action="/index.php/oborudovanie/bez-provodov-wi-fi" 
+method="post">
+<FIELDSET class="userdata">
+<P id="form-login-username"><LABEL 
+for="modlgn-username">Логин</LABEL><INPUT name="username" class="inputbox" id="modlgn-username" type="text" size="18">
+	 </P>
+<P id="form-login-password"><LABEL 
+for="modlgn-passwd">Пароль</LABEL><INPUT name="password" class="inputbox" id="modlgn-passwd" type="password" size="18">
+	 </P>
+<P id="form-login-remember"><LABEL for="modlgn-remember">Запомнить меня</LABEL>
+		 <INPUT name="remember" class="inputbox" id="modlgn-remember" type="checkbox" 
+value="yes">
+	 </P><INPUT name="Submit" class="button art-button" type="submit" value="Войти">
+	 <INPUT name="option" type="hidden" value="com_users">
+	 <INPUT name="task" type="hidden" value="user.login">
+	 <INPUT name="return" type="hidden" value="aW5kZXgucGhwP29wdGlvbj1jb21fY29udGVudCZ2aWV3PWFydGljbGUmY2F0aWQ9MjImaWQ9NjYmSXRlbWlkPTE5MQ==">
+	 <INPUT name="22e6da0e7dab65885271194bd7fb9f0a" type="hidden" value="1">	</FIELDSET>
+<UL>
+  <LI><A 
+  href="http://homes-smart.ru/index.php/component/users/?view=reset">Забыли 
+  пароль?</A>		 </LI>
+  <LI><A 
+  href="http://homes-smart.ru/index.php/component/users/?view=remind">Забыли 
+  логин?</A>		 </LI>
+  <LI><A href="http://homes-smart.ru/index.php/component/users/?view=registration">Регистрация</A>
+  		 </LI></UL></FORM></DIV></DIV>
+<DIV class="art-block clearfix">
+<DIV class="art-blockcontent">
+<FORM name="ksearch-form" id="ksearch-form" action="/index.php/component/kunena/" 
+method="post"><INPUT name="view" type="hidden" value="search">	 <INPUT name="task" type="hidden" value="results">
+	 
+<DIV class="ksearch">
+<FIELDSET class="ksearch-fieldset"><LEGEND class="ksearch-legend">Ключевое 
+�?лово</LEGEND>			 <LABEL class="ksearch-label" for="ksearch-keywords">Пои�?к по 
+ключевому �?лову:</LABEL>			 <INPUT name="q" class="ks kinput" id="ksearch-keywords" onfocus="if(this.value=='Search forum') this.value='';" onblur="if(this.value=='') this.value='Search forum';" type="text" size="16" value="Search forum">
+			 <INPUT name="titleonly" id="ksearch-keywordfilter" type="hidden" value="0">
+				 <INPUT class="kbutton" type="submit" value="Search">		</FIELDSET></DIV></FORM></DIV></DIV>
+<DIV class="art-block clearfix">
+<DIV class="art-blockheader">
+<H3 class="t">Другие материалы</H3></DIV>
+<DIV class="art-blockcontent">
+<UL class="relateditems">
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/raspberry-pi/23-chto-takoe-raspberry-pi">
+  				Что такое Raspberry Pi ? Первоначальная настройка.</A> </LI>
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/raspberry-pi/rabota-s-gpio-i-datchikami">Работа 
+  с GPIO и датчиками на Raspberry Pi</A> </LI>
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/uroki-i-primery/gpio-na-lyubom-kompyutere">
+  				GPIO на любом компьютере</A> </LI>
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/uroki-i-primery/41-usb-kontroller-umnogo-doma">USB 
+  Контроллер умного дома</A> </LI>
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/sverkhdeshevyj-wi-fi-modul-esp8266">
+  				Сверхдешевый WI-FI модуль ESP8266</A> </LI>
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/proekt-umnogo-modulya-na-baze-esp8266">Проект 
+  умного модуля на базе ESP8266</A> </LI>
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/tcp-klient-na-esp8266">
+  				TCP клиент на ESP8266</A> </LI>
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-2-4-ggts/63-shlyuz-wi-fi-nrf24l01-na-baze-esp8266-dlya-obmena-dannymi-s-nrf24l01-i-nrf24le1">Шлюз 
+  WI-FI-nRF24L01 на базе ESP8266 для обмена данными с nRF24L01 и nRF24LE1  </A> 
+  </LI>
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/displei-na-esp8266">Дисплеи 
+  на ESP8266</A> </LI>
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/otpravka-dannykh-na-web-server-majordomo-na-esp8266">Отправка 
+  данных на web сервер (MajorDoMo) на ESP8266</A> </LI>
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/73-atsp-i-analogovye-datchiki-na-esp8266">АЦП 
+  и аналоговые датчики на ESP8266</A> </LI>
+  <LI><A href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/74-rabota-s-optsiej-termostat-v-esp8266">Работа 
+  с опцией термостат в ESP8266</A> </LI></UL></DIV></DIV>
+<DIV class="art-block clearfix">
+<DIV class="art-blockcontent">
+<DIV class="custom">
+<P><A href="http://vk.com/homessmart" target="_blank"><IMG width="120" height="29" 
+alt="vk" 
+src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/vk.jpg"></A></P></DIV></DIV></DIV>
+<DIV class="art-block clearfix">
+<DIV class="art-blockcontent">
+<DIV class="custom">
+<P><IFRAME width="146" height="31" src="about:blank" frameborder="0" scrolling="no" 
+allowtransparency="true"></IFRAME></P>
+<FORM action="https://www.paypal.com/cgi-bin/webscr" method="post" 
+target="_top"><INPUT name="cmd" type="hidden" value="_s-xclick"> <INPUT name="hosted_button_id" type="hidden" value="U9TM3QG95FJRA"> 
+<INPUT name="submit" type="image" alt="PayPal - The safer, easier way to pay online!" 
+src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/btn_donate_SM.gif" border="0"> 
+<IMG width="1" height="1" alt="" src="" border="0"></FORM></DIV></DIV></DIV>
+<DIV class="art-block clearfix">
+<DIV class="art-blockcontent">
+<DIV class="custom">
+<SCRIPT src="" async=""></SCRIPT>
+ <!-- Автоматический --> <INS class="adsbygoogle" style="display: block;" 
+data-ad-format="auto" data-ad-slot="3830529234" data-ad-client="ca-pub-5904641952938599"></INS>
+<SCRIPT>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</SCRIPT>
+</DIV></DIV></DIV>
+<SCRIPT type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="//www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</SCRIPT>
+                         </DIV>
+<DIV class="art-layout-cell art-content"><ARTICLE class="art-post">
+<DIV class="art-postcontent clearfix">
+<DIV class="breadcrumbs"><SPAN class="showHere">Вы здесь: </SPAN><A class="pathway" 
+href="http://homes-smart.ru/">Home</A> <IMG alt="" src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/arrow.png"> 
+<A class="pathway" 
+href="http://homes-smart.ru/index.php/oborudovanie">Железо</A> <IMG alt="" src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/arrow.png"> 
+<A class="pathway" href="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi">Без 
+проводов (WI-FI)</A> <IMG alt="" src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/arrow.png"> 
+<SPAN>Работа с GPIO (VGPIO) на ESP8266</SPAN></DIV></DIV></ARTICLE><ARTICLE 
+class="art-post art-messages">
+<DIV class="art-postcontent clearfix">
+<DIV id="system-message-container"></DIV></DIV></ARTICLE>
+<DIV class="item-page"><ARTICLE class="art-post">
+<DIV class="art-postmetadataheader">
+<DIV class="art-postheadericons art-metadata-icons"><SPAN class="art-postdateicon">Обновлено 
+12.02.2016 21:50</SPAN> | <SPAN class="art-postauthoricon">Автор: <A href="http://homes-smart.ru/index.php/component/contact/contact/">MaksMS</A></SPAN> 
+| Просмотров: 9743</DIV></DIV>
+<DIV class="art-postcontent clearfix">
+<DIV class="art-article">
+<DIV style="clear: both;"></DIV>
+<DIV class="socbuttons" style="overflow: hidden; padding-top: 10px; float: left;">
+<DIV style="width: 75px; height: 20px; margin-left: 10px; float: left;"><IFRAME 
+src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/small.htm" frameborder="0" 
+scrolling="no" style="border: currentColor; border-image: none; width: 75px; height: 20px; overflow: hidden;" 
+allowtransparency="true"></IFRAME></DIV>
+<DIV style="width: 100px; margin-right: 0px; margin-left: 10px; float: left;"><A 
+class="twitter-share-button" href="http://twitter.com/share" rel="nofollow" 
+data-lang="en" data-count="horizontal" data-url="http://homes-smart.ru/index.php/oborudovanie/bez-provodov-wi-fi/66-rabota-s-gpio-vgpio-na-esp8266">Twitter</A>
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/widgets.js" type="text/javascript"></SCRIPT>
+</DIV>
+<DIV style="border: currentColor; border-image: none; width: 60px !important; margin-left: 10px; float: left;"><g:plusone 
+size="medium"></g:plusone></DIV>
+<DIV style="border: currentColor; border-image: none; width: 75px !important; margin-left: 10px; float: left;">
+<SCRIPT src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/openapi.js" type="text/javascript"></SCRIPT>
+
+<SCRIPT type="text/javascript">VK.init({apiId:4673882, onlyWidgets: true});</SCRIPT>
+
+<DIV id="vk_like66"></DIV>
+<SCRIPT type="text/javascript">VK.Widgets.Like("vk_like66", {type: "mini"});</SCRIPT>
+</DIV>
+<DIV style="clear: both;"></DIV>
+<STYLE>.soc_no a{color:#d6d6d6; font-size:8px;} .soc_yes a{color:#d6d6d6; font-size:8px;display:none;}</STYLE>
+
+<DIV class="soc_yes"><A title="SocButtons v1.5" href="http://stroibukva.ru/soc/socbuttons-v15.htm" 
+target="_blank">SocButtons v1.5</A></DIV></DIV>
+<DIV style="clear: both;"></DIV>
+<P>ESP8266 имеет 15 полноценных GPIO выходов. 6 из которых заняты микросхемой 
+flash памяти. При этом GPIO 0,1,2,3,15 имеют системные функции и имеют 
+ограничения при использовании - не рекомендуется их использовать для сухого 
+контакта, кнопок, прерываний (хотя в некоторых случаях работать будет). 
+&nbsp;Для штатной работы модуля ESP8266 GPIO 0 и 2 <STRONG>не должны</STRONG> 
+быть подтянуты к минусу при старте модуля. GPIO 15 для старта 
+<STRONG>должен</STRONG> подтянут к минусу через резистор 10кОм.&nbsp;GPIO 1 
+соотвествует вывод TXD. GPIO 3 - RXD.</P>
+<P>Так же ESP8266 имеет отдельный GPIO16 , который управляется через RTC 
+регистры, этот GPIO имеет ограничения при использовании и в прошивке 
+используется только для режима OUTPUT (выход). Подключение датчиков к этому 
+выводу невозможно. GPIO16 используется для пробуждения модуля при использовании 
+спящего режима, если подключить его к выводу RESET.</P>
+<P><STRONG><SPAN style="font-size: 14pt;">&nbsp;Карта GPIO 
+модуля</SPAN></STRONG></P>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD>GPIO</TD>
+    <TD>Описание</TD></TR>
+  <TR>
+    <TD>0-5,12-16</TD>
+    <TD>GPIO самого модуля.</TD></TR>
+  <TR></TR>
+  <TR>
+    <TD>6-11</TD>
+    <TD>GPIO заняты под flash память.</TD></TR>
+  <TR>
+    <TD>20-79</TD>
+    <TD>VGPIO удаленных ESP8266&nbsp;(только управление)</TD></TR>
+  <TR>
+    <TD>80-199</TD>
+    <TD>Зарезервирировано. Может быть расширено для VGPIO</TD></TR>
+  <TR>
+    <TD>200-215</TD>
+    <TD>Ремап MCP23017</TD></TR>
+  <TR>
+    <TD>220-227</TD>
+    <TD>Ремап PCF8574&nbsp;</TD></TR>
+  <TR>
+    <TD>230-245</TD>
+    <TD>Ремап 74HC595</TD></TR></TBODY></TABLE>
+<P><STRONG><SPAN style="font-size: 14pt;">Настройка GPIO</SPAN></STRONG></P>
+<P><A class="linkthumb modal" href="http://homes-smart.ru/images/gpio_opt.png" 
+target="_blank" rel="lightbox[id_66]"><IMG width="200" height="70" class="thumb" 
+style="margin-right: 10px; float: left;" alt="gpio opt" src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/11b14486017537495298738fa8563fde.png"></A>На 
+вкладке GPIO можно установить назначение выводов: Можно выбрать как INPUT (для 
+сухого контакта) так и OUTPUT, INVERT OUTPUT (для реле, управляемые по минусу). 
+Состояние INPUT у GPIO можно отследить на страничке 
+<EM>http://IP_ADRESS/gpioprintinput</EM> , в MQTT, а так же на серверах 
+narodmon, flymon.net, MajorDoMo. Аналогично можно посмотреть состояние GPIO и 
+для режима OUTPUT на вкладке <EM>http://IP_ADRESS/gpioprint</EM> .</P>
+<P>Управлять состоянием gpio можно командой вида 
+<EM>http://IP_ADRES/gpio?st=1&amp;pin=12</EM> - этим Вы установите на 12 GPIO 
+логическую единицу. При установке st=2 будет проихсодить инвертирование GPIO. 
+Если дописать к команде &amp;flash=1 ,то настройка запишется в энергонезависимую 
+память.&nbsp;&amp;click=10 - инвертирует состояние через указанный промежуток 
+времени в секундах. Например 
+<EM>http://IP_ADRES/gpio?st=1&amp;pin=5</EM><EM>&amp;click=10 </EM>включит GPIO 
+5 на 10 секунд.</P>
+<P>GET запросы на данные адреса модуля требует ввод логина/пароля, если включена 
+опция&nbsp;"Full Security".</P>
+<P>При подключении устройств, датчиков на данной вкладке настройка этих GPIO не 
+требуется.</P>
+<P><STRONG>Обратите внимание</STRONG>, что на некоторых китайских модулях GPIO 5 
+и 4 могут быть перепутаны.</P>
+<P><SPAN style="font-size: 14pt;"><STRONG>Настройка VGPIO</STRONG></SPAN></P>
+<P><A class="linkthumb modal" href="http://homes-smart.ru/images/vgpio_opt.png" 
+target="_blank" rel="lightbox[id_66]"><IMG width="200" height="76" class="thumb" 
+style="margin-right: 10px; float: left;" alt="vgpio opt" src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/4ae3fc9a19e055532d0bc1bb17dfb911.png"></A>При 
+установке данного модуля на вкладке VGPIO можно настроить назначение GPIO, 
+расположенных на других ESP8266 находящихся в данной локальной сети. Необходимо 
+указать последнюю цифру IP адреса. Например локальный&nbsp; номер GPIO 21 будет 
+соотвествовать удаленному GPIO 1 находящийся на модуле с IP адресом 
+192.168.1.154 на (см.скриншот).&nbsp;</P>
+<P>Управление данными VGPIO поддерживается из модуля планировщика заданий, 
+термостата, логического модуля, IR управления, а так же у функции 
+KEY(прерывания). Назначить VGPIO для подключения датчиков и устройств 
+невозможно.</P>
+<P>В данный момент для работы VGPIO на удаленных модулях функция&nbsp;Full 
+Security должна быть отключена (но в планах добавить её поддержку)</P>
+<P><SPAN style="font-size: 14pt;"><STRONG>Remap( переназначение GPIO) c 
+MCP23017, PCF8574 <SPAN style="font-size: 14pt;"><STRONG>и</STRONG></SPAN> 
+74HC595.</STRONG></SPAN></P>
+<P>Для удобства управления из функций прошивки было добавлено 
+переназначение(ремап) GPIO находящихся на микросхемах-расширителях портов 
+MCP23017, PCF8574 и 74HC595. Возможности и ограничения аналогичны VGPIO.</P>
+<P><SPAN style="font-size: 14pt;"><STRONG>Использование расширителей 
+портов</STRONG></SPAN></P>
+<P>Прошивка поддерживает микросхемы PCF8574(8 GPIO) , MCP23017(16 GPIO) и 
+74HC595 (до 16 GPIO).</P>
+<P><STRONG>Микрохсема PCF8574</STRONG> по умолчанию должна иметь i2c адрес 0x20 
+(возможно включение изменения адреса в конструкторе прошивки по запросу). 
+Управление через GET запрос <EM><A href="http://ip_adres/pcfgpio?adr=20&amp;pin=X&amp;set=Y">http://IP_ADRES/pcfgpio?adr=20&amp;pin=X&amp;set=Y</A><SPAN 
+style="color: rgb(255, 0, 0);">&nbsp;*</SPAN>&nbsp;</EM>&nbsp;, где X – выход 
+0-7, а Y – статус 0/1. Читать состояние по адресу 
+<EM>http://IP_ADRES/pcfgpioprint?adr=20</EM> <EM style="line-height: 15.8px; font-size: 12.16px;"><SPAN 
+style="color: rgb(255, 0, 0);">*</SPAN></EM>, где 20 - необязательный адрес 
+устройства заданный вручную.&nbsp;<SPAN style="line-height: 15.8px; font-size: 12.16px;">В 
+планах управление/чтение через MQTT.</SPAN></P>
+<P><STRONG>Микросхема MCP23017</STRONG> по умолчанию должна иметь i2c адрес 0x20 
+(A0,A1,A2 на GND). &nbsp;Настройка режима input/output настраивается на 
+соотвествующей веб вкладке. Чтение состояния GET запросом&nbsp;<EM><A href="http://ip_adres/mcpprint">http://IP_ADRES/mcpprint</A>&nbsp;<EM 
+style="line-height: 15.8px; font-size: 12.16px;"><SPAN style="color: rgb(255, 0, 0);">*</SPAN></EM>&nbsp;</EM>&nbsp;. 
+Установка состояния вывода &nbsp;<EM><A href="http://ip_adres/mcpgpio?pin=x&amp;st=1">http://IP_ADRES/mcpgpio?pin=x&amp;st=1<EM 
+style="line-height: 15.8px; font-size: 12.16px;"><SPAN style="color: rgb(255, 0, 0);">*</SPAN></EM></A>&nbsp;</EM>. 
+&nbsp;Возможно управление/чтение через MQTT.</P>
+<P>Возможно управление через remap внутри модуля - смотрите выше.</P>
+<P><STRONG>Микросхема 74HC595</STRONG> - сдвиговый регистр на 8 дополнительных 
+выходов. &nbsp;Занимает 3 выхода ESP8266: &nbsp;GPIO 14 -pin 14 (DS) у 75HC595, 
+GPIO 12 -pin 12 (ST_CP) у 75HC595, GPIO 13 - pin 11 (SH_CP) у 75HC595, MR(10) на 
++V, OE(13) на GND. Микросхемы возможно подключенить каскадом две штуки , получив 
+16 выводов.&nbsp;<SPAN style="line-height: 15.8px; font-size: 12.16px;">Возможно 
+управление/чтение через MQTT.</SPAN></P>
+<P>&nbsp;<EM style="line-height: 15.8px; font-size: 12.16px;"><SPAN style="color: rgb(255, 0, 0);">*&nbsp;</SPAN></EM>- 
+Комадны и странички упразднены !! Используйте ремап !! Можно включить по запросу 
+старый вариант, но поддерживатся в будущем не будет !<EM style="line-height: 15.8px; font-size: 12.16px;"><SPAN 
+style="color: rgb(255, 0, 0);"><BR></SPAN></EM></P>
+<P><SPAN style="font-size: 14pt;"><STRONG>Работа с 
+прерываниями</STRONG></SPAN></P>
+<P><A class="linkthumb modal" href="http://homes-smart.ru/images/int_opt.png" 
+target="_blank" rel="lightbox[id_66]"><IMG width="200" height="125" class="thumb" 
+style="margin-right: 10px; float: left;" alt="int opt" src="Работа%20с%20GPIO%20(VGPIO)%20на%20ESP8266_files/b99ab8378630c5bb3a7be1b8e107589c.png"></A>Прошивка 
+поддерживает 3 режима работы с прерываниями:</P>
+<P><STRONG><EM>Counter</EM></STRONG> - подсчет импульсов с счетчиков воды, газа, 
+электричества. Данные отправляются на все сервера. При установке модуля 
+"Сбрасываемый счетчик" отправляются данные импульсов за каждый период отправки 
+данных. В поле "Impulse divider" возможна установка делителя.</P>
+<P><STRONG><EM>Active send</EM></STRONG> - Немедленная отправка факта изменения 
+состояния прерывания на сервера. Может использоватся для датчиков движения или 
+датчиков открытия/вскрытия двери.</P>
+<P><STRONG><EM>Key</EM></STRONG>&nbsp;- Управление GPIO по нажатию кнопки. 
+Включение/ выключение GPIO , указанного в поле "GPIO For Key". Изменение 
+состояния GPIO отправляется на сервера.&nbsp;</P>
+<P><STRONG>Time Key</STRONG>&nbsp;- Включение установленного GPIO на заданный 
+промежуток времени, например по прерыванию с датчика движения. Функция доступна 
+только на первом прерывании.</P>
+<P>Прерывание может настраивается в пункте Mode. Оно может происходить при 
+отрицательном импульсе (Neg) , при положительном (Pos) или при любом (Any). 
+Например при замыкании входа прерывания на GND необходимо выбрать 
+режим&nbsp;Neg.</P>
+<P>В данный момент доступен новый модуль прерываний в конструкторе прошивки, 
+который поддерживает до 4 счетчиков или кнопок. Старый модуль &nbsp;упразнен 
+11.10.15.</P></DIV></DIV></ARTICLE></DIV><!-- begin nostyle --> 
+<DIV class="art-nostyle"><!-- begin nostyle content --> 
+<DIV class="custom"><BR>
+<SCRIPT src="" async=""></SCRIPT>
+ <!-- 728x90, создано 03.09.11 --> <INS class="adsbygoogle" style="width: 728px; height: 90px; display: inline-block;" 
+data-ad-slot="5849354694" data-ad-client="ca-pub-5904641952938599"></INS> 
+<SCRIPT>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</SCRIPT>
+</DIV><!-- end nostyle content --> </DIV><!-- end nostyle -->                    
+     </DIV></DIV></DIV></DIV><FOOTER class="art-footer"><!-- Yandex.Metrika counter -->
+<SCRIPT type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20856274 = new Ya.Metrika({id:20856274, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</SCRIPT>
+<NOSCRIPT>&lt;div&gt;&lt;img src="//mc.yandex.ru/watch/20856274" 
+style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</NOSCRIPT><!-- /Yandex.Metrika counter --> <!-- <p><a href="#">Link1</a> | <a href="#">Link2</a> | <a href="#">Link3</a></p> --> 
+<P>Home`s Smart © 2013-2016. г.Киров. <BR>Цитирование материалов возможно только 
+со ссылкой на сайт. Использование фотоматериалов только с разрешения 
+авторов.</P></FOOTER></DIV>
+<P class="art-page-footer"><!-- <span id="art-footnote-links"><a href="http://homes-smart.ru" target="_blank">Home`s Smart</a></span>--> 
+        <!--LiveInternet counter-->
+<SCRIPT type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t11.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></SCRIPT>
+<!--/LiveInternet-->     </P></DIV></BODY></HTML>
