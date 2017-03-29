@@ -1,0 +1,2511 @@
+#art-main {
+	background-position: 0% 0%, 0% 0%; margin: 0px auto; left: 0px; top: 0px; width: 100%; overflow: hidden; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; position: relative; cursor: default; min-height: 100%; background-image: url("../images/pageglare.png"), -ms-linear-gradient(rgb(170, 164, 146) 0px, rgb(226, 224, 218) 250px); background-attachment: fixed, fixed !important; background-repeat: no-repeat, no-repeat; background-size: auto, auto; background-origin: padding-box, padding-box; background-clip: border-box, border-box; background-color: transparent; -svg-background: url(../images/pageglare.png) no-repeat, linear-gradient(top, #AAA492 0, #E2E0DA 250px) no-repeat;
+}
+table {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal;
+}
+ul.art-hmenu {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal;
+}
+h1 {
+	margin: 0px; padding: 0px;
+}
+h2 {
+	margin: 0px; padding: 0px;
+}
+h3 {
+	margin: 0px; padding: 0px;
+}
+h4 {
+	margin: 0px; padding: 0px;
+}
+h5 {
+	margin: 0px; padding: 0px;
+}
+h6 {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+a {
+	margin: 0px; padding: 0px;
+}
+ul {
+	margin: 0px; padding: 0px;
+}
+ol {
+	margin: 0px; padding: 0px;
+}
+li {
+	margin: 0px; padding: 0px;
+}
+.art-button {
+	background-position: 0% 0%; margin: 0px auto; padding: 0px 5px; border: 1px dotted rgba(117, 110, 92, 0.8); border-image: none; height: 21px; border-collapse: separate; box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.24); background-image: -ms-linear-gradient(rgba(170, 164, 146, 0.8) 0px, rgba(170, 164, 146, 0.8) 50%, rgba(167, 161, 144, 0.8) 60%, rgba(150, 142, 121, 0.8) 100%); background-attachment: scroll; background-repeat: no-repeat; background-size: auto; background-origin: border-box !important; background-clip: border-box; background-color: transparent; -svg-background: linear-gradient(top, rgba(170, 164, 146, 0.8) 0, rgba(170, 164, 146, 0.8) 50%, rgba(167, 161, 144, 0.8) 60%, rgba(150, 142, 121, 0.8) 100%) no-repeat; -webkit-background-origin: border; -moz-background-origin: border; -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24); -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24);
+}
+.art-postcontent {
+	text-align: left;
+}
+.art-postheadericons {
+	text-align: left;
+}
+.art-postfootericons {
+	text-align: left;
+}
+.art-blockcontent {
+	text-align: left;
+}
+ul.art-vmenu a {
+	text-align: left;
+}
+.art-postcontent {
+	line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postcontent li {
+	line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postcontent table {
+	line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postcontent a {
+	line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postcontent a:link {
+	line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postcontent a:visited {
+	line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postcontent a.visited {
+	line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postcontent a:hover {
+	line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postcontent a.hovered {
+	line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postcontent p {
+	margin: 13px 0px;
+}
+.art-postcontent h1 {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h1 a {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h1 a:link {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h1 a:visited {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h1 a:hover {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h2 {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h2 a {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h2 a:link {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h2 a:visited {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h2 a:hover {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h3 {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h3 a {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h3 a:link {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h3 a:visited {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h3 a:hover {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h4 {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h4 a {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h4 a:link {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h4 a:visited {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h4 a:hover {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h5 {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h5 a {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h5 a:link {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h5 a:visited {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h5 a:hover {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h6 {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h6 a {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h6 a:link {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h6 a:visited {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent h6 a:hover {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-blockheader .t {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-blockheader .t a {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-blockheader .t a:link {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-blockheader .t a:visited {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-blockheader .t a:hover {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-vmenublockheader .t {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-vmenublockheader .t a {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-vmenublockheader .t a:link {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art- vmenublockheader .t a:visited {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-vmenublockheader .t a:hover {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-headline {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-headline a {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-headline a:link {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-headline a:visited {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-headline a:hover {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-slogan {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-slogan a {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-slogan a:link {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-slogan a:visited {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-slogan a:hover {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postheader {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postheader a {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postheader a:link {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postheader a:visited {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postheader a:hover {
+	line-height: 120%; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px; font-style: normal; font-weight: normal;
+}
+.art-postcontent a {
+	color: rgb(213, 59, 42); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postcontent a:link {
+	color: rgb(213, 59, 42); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postcontent a:visited {
+	color: rgb(223, 106, 94); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postcontent a.visited {
+	color: rgb(223, 106, 94); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postcontent a:hover {
+	color: rgb(29, 190, 226); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: underline;
+}
+.art-postcontent a.hover {
+	color: rgb(29, 190, 226); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: underline;
+}
+.art-postcontent h1 {
+	margin: 10px 0px 0px; color: rgb(29, 190, 226); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 26px;
+}
+.art-blockcontent h1 {
+	margin: 10px 0px 0px; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 26px;
+}
+.art-postcontent h1 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 26px;
+}
+.art-postcontent h1 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 26px;
+}
+.art-postcontent h1 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 26px;
+}
+.art-postcontent h1 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 26px;
+}
+.art-blockcontent h1 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 26px;
+}
+.art-blockcontent h1 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 26px;
+}
+.art-blockcontent h1 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 26px;
+}
+.art-blockcontent h1 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 26px;
+}
+.art-postcontent h2 {
+	margin: 10px 0px 0px; color: rgb(79, 204, 232); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px;
+}
+.art-blockcontent h2 {
+	margin: 10px 0px 0px; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px;
+}
+.art-postcontent h2 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px;
+}
+.art-postcontent h2 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px;
+}
+.art-postcontent h2 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px;
+}
+.art-postcontent h2 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px;
+}
+.art-blockcontent h2 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px;
+}
+.art-blockcontent h2 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px;
+}
+.art-blockcontent h2 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px;
+}
+.art-blockcontent h2 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 22px;
+}
+.art-postcontent h3 {
+	margin: 10px 0px 0px; color: rgb(143, 135, 112); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px;
+}
+.art-blockcontent h3 {
+	margin: 10px 0px 0px; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px;
+}
+.art-postcontent h3 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px;
+}
+.art-postcontent h3 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px;
+}
+.art-postcontent h3 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px;
+}
+.art-postcontent h3 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px;
+}
+.art-blockcontent h3 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px;
+}
+.art-blockcontent h3 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px;
+}
+.art-blockcontent h3 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px;
+}
+.art-blockcontent h3 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px;
+}
+.art-postcontent h4 {
+	margin: 10px 0px 0px; color: rgb(117, 110, 92); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 18px;
+}
+.art-blockcontent h4 {
+	margin: 10px 0px 0px; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 18px;
+}
+.art-postcontent h4 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 18px;
+}
+.art-postcontent h4 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 18px;
+}
+.art-postcontent h4 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 18px;
+}
+.art-postcontent h4 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 18px;
+}
+.art-blockcontent h4 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 18px;
+}
+.art-blockcontent h4 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 18px;
+}
+.art-blockcontent h4 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 18px;
+}
+.art-blockcontent h4 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 18px;
+}
+.art-postcontent h5 {
+	margin: 10px 0px 0px; color: rgb(117, 110, 92); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px;
+}
+.art-blockcontent h5 {
+	margin: 10px 0px 0px; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px;
+}
+.art-postcontent h5 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px;
+}
+.art-postcontent h5 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px;
+}
+.art-postcontent h5 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px;
+}
+.art-postcontent h5 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px;
+}
+.art-blockcontent h5 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px;
+}
+.art-blockcontent h5 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px;
+}
+.art-blockcontent h5 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px;
+}
+.art-blockcontent h5 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px;
+}
+.art-postcontent h6 {
+	margin: 10px 0px 0px; color: rgb(192, 188, 175); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent h6 {
+	margin: 10px 0px 0px; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-postcontent h6 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-postcontent h6 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-postcontent h6 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-postcontent h6 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent h6 a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent h6 a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent h6 a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent h6 a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+header {
+	background-origin: border-box !important; -webkit-background-origin: border; -moz-background-origin: border;
+}
+footer {
+	background-origin: border-box !important; -webkit-background-origin: border; -moz-background-origin: border;
+}
+article {
+	background-origin: border-box !important; -webkit-background-origin: border; -moz-background-origin: border;
+}
+nav {
+	background-origin: border-box !important; -webkit-background-origin: border; -moz-background-origin: border;
+}
+#art-hmenu-bg {
+	background-origin: border-box !important; -webkit-background-origin: border; -moz-background-origin: border;
+}
+.art-sheet {
+	background-origin: border-box !important; -webkit-background-origin: border; -moz-background-origin: border;
+}
+.art-hmenu a {
+	background-origin: border-box !important; -webkit-background-origin: border; -moz-background-origin: border;
+}
+.art-vmenu a {
+	background-origin: border-box !important; -webkit-background-origin: border; -moz-background-origin: border;
+}
+.art-slidenavigator > a {
+	background-origin: border-box !important; -webkit-background-origin: border; -moz-background-origin: border;
+}
+.art-checkbox::before {
+	background-origin: border-box !important; -webkit-background-origin: border; -moz-background-origin: border;
+}
+.art-radiobutton::before {
+	background-origin: border-box !important; -webkit-background-origin: border; -moz-background-origin: border;
+}
+header {
+	display: block; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+footer {
+	display: block; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+article {
+	display: block; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+nav {
+	display: block; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+#art-hmenu-bg {
+	display: block; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.art-sheet {
+	display: block; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.art-slidenavigator > a {
+	display: block; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.art-checkbox::before {
+	display: block; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.art-radiobutton::before {
+	display: block; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+ul {
+	list-style-type: none;
+}
+ol {
+	list-style-position: inside;
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+}
+body {
+	margin: 0px; padding: 0px; color: rgb(71, 67, 56); min-width: 700px;
+}
+.art-header::before {
+	width: 100%; display: table; content: " ";
+}
+#art-header-bg::before {
+	width: 100%; display: table; content: " ";
+}
+.art-layout-cell::before {
+	width: 100%; display: table; content: " ";
+}
+.art-layout-wrapper::before {
+	width: 100%; display: table; content: " ";
+}
+.art-footer::before {
+	width: 100%; display: table; content: " ";
+}
+.art-nav::before {
+	width: 100%; display: table; content: " ";
+}
+#art-hmenu-bg::before {
+	width: 100%; display: table; content: " ";
+}
+.art-sheet::before {
+	width: 100%; display: table; content: " ";
+}
+.art-header::after {
+	font: 0px/0 serif; clear: both; display: block; content: " "; font-size-adjust: none; font-stretch: normal;
+}
+#art-header-bg::after {
+	font: 0px/0 serif; clear: both; display: block; content: " "; font-size-adjust: none; font-stretch: normal;
+}
+.art-layout-cell::after {
+	font: 0px/0 serif; clear: both; display: block; content: " "; font-size-adjust: none; font-stretch: normal;
+}
+.art-layout-wrapper::after {
+	font: 0px/0 serif; clear: both; display: block; content: " "; font-size-adjust: none; font-stretch: normal;
+}
+.art-footer::after {
+	font: 0px/0 serif; clear: both; display: block; content: " "; font-size-adjust: none; font-stretch: normal;
+}
+.art-nav::after {
+	font: 0px/0 serif; clear: both; display: block; content: " "; font-size-adjust: none; font-stretch: normal;
+}
+#art-hmenu-bg::after {
+	font: 0px/0 serif; clear: both; display: block; content: " "; font-size-adjust: none; font-stretch: normal;
+}
+.art-sheet::after {
+	font: 0px/0 serif; clear: both; display: block; content: " "; font-size-adjust: none; font-stretch: normal;
+}
+.cleared {
+	font: 0px/0 serif; clear: both; display: block; content: " "; font-size-adjust: none; font-stretch: normal;
+}
+.clearfix::after {
+	font: 0px/0 serif; clear: both; display: block; content: " "; font-size-adjust: none; font-stretch: normal;
+}
+form {
+	margin: 0px !important; padding: 0px !important;
+}
+table.position {
+	width: 100%; position: relative; table-layout: fixed;
+}
+li h1 {
+	margin: 1px;
+}
+.art-postcontent li h1 {
+	margin: 1px;
+}
+.art-blockcontent li h1 {
+	margin: 1px;
+}
+li h2 {
+	margin: 1px;
+}
+.art-postcontent li h2 {
+	margin: 1px;
+}
+.art-blockcontent li h2 {
+	margin: 1px;
+}
+li h3 {
+	margin: 1px;
+}
+.art-postcontent li h3 {
+	margin: 1px;
+}
+.art-blockcontent li h3 {
+	margin: 1px;
+}
+li h4 {
+	margin: 1px;
+}
+.art-postcontent li h4 {
+	margin: 1px;
+}
+.art-blockcontent li h4 {
+	margin: 1px;
+}
+li h5 {
+	margin: 1px;
+}
+.art-postcontent li h5 {
+	margin: 1px;
+}
+.art-blockcontent li h5 {
+	margin: 1px;
+}
+li h6 {
+	margin: 1px;
+}
+.art-postcontent li h6 {
+	margin: 1px;
+}
+.art-blockcontent li h6 {
+	margin: 1px;
+}
+li p {
+	margin: 1px;
+}
+.art-postcontent li p {
+	margin: 1px;
+}
+.art-blockcontent li p {
+	margin: 1px;
+}
+.art-shapes {
+	left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; position: absolute; z-index: 0;
+}
+.art-slider-inner {
+	width: 100%; height: 100%; overflow: hidden; position: relative;
+}
+.art-slidenavigator > a {
+	font-size: 1px; vertical-align: middle; display: inline-block; outline-style: none;
+}
+.art-slidenavigator > a:last-child {
+	margin-right: 0px !important;
+}
+.art-headline {
+	left: 12.5%; top: 32px; line-height: 100%; margin-left: -27px !important; display: inline-block; position: absolute; z-index: 101; min-width: 50px; transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg);
+}
+.art-headline {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255) !important; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 36px; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap;
+}
+.art-headline a {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255) !important; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 36px; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap;
+}
+.art-headline a:link {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255) !important; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 36px; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap;
+}
+.art-headline a:visited {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255) !important; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 36px; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap;
+}
+.art-headline a:hover {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255) !important; font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 36px; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap;
+}
+.art-slogan {
+	left: 5.06%; top: 73px; line-height: 100%; margin-left: -10px !important; display: inline-block; white-space: nowrap; position: absolute; z-index: 102; min-width: 50px; transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg);
+}
+.art-slogan {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 16px; text-decoration: none;
+}
+.art-slogan a {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 16px; text-decoration: none;
+}
+.art-slogan a:link {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 16px; text-decoration: none;
+}
+.art-slogan a:visited {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 16px; text-decoration: none;
+}
+.art-slogan a:hover {
+	margin: 0px; padding: 0px; text-align: left; color: rgb(255, 255, 255) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 16px; text-decoration: none;
+}
+.art-sheet {
+	background: rgb(255, 255, 255); margin: 50px auto 0px; padding: 5px; width: 80%; position: relative; z-index: auto !important; cursor: auto; min-width: 700px; max-width: 1536px; box-shadow: 1px 1px 4px 2px rgba(0,0,0,0.4); -webkit-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4); -moz-box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+}
+.art-header {
+	background-position: left top; margin: 0px auto; height: 125px; position: relative; z-index: auto !important; background-image: url("../images/header.jpg"); background-repeat: no-repeat;
+}
+.responsive .art-header {
+	background-position: center; background-image: url("../images/header.jpg");
+}
+.art-header > div.art-nostyle {
+	position: absolute; z-index: 101;
+}
+.art-header > div.art-block {
+	position: absolute; z-index: 101;
+}
+.art-header > div.art-post {
+	position: absolute; z-index: 101;
+}
+.art-nav {
+	background: -ms-linear-gradient(rgba(255, 255, 255, 0.49) 0px, rgba(216, 72, 56, 0.17) 47%, rgba(0, 0, 0, 0.25) 100%) no-repeat, url("../images/nav.png"), -ms-linear-gradient(rgb(244, 204, 200) 0px, rgb(213, 59, 42) 47%, rgb(34, 9, 7) 100%) no-repeat; margin: 0px auto; padding: 3px 3px 0px; text-align: left; border-bottom-color: rgb(226, 224, 218); border-bottom-width: 5px; border-bottom-style: solid; position: relative; z-index: 499; -svg-background: linear-gradient(top, rgba(255, 255, 255, 0.49) 0, rgba(216, 72, 56, 0.17) 47%, rgba(0, 0, 0, 0.25) 100%) no-repeat, url(../images/nav.png), linear-gradient(top, #F4CCC8 0, #D53B2A 47%, #220907 100%) no-repeat;
+}
+ul.art-hmenu a {
+	position: relative; z-index: 11;
+}
+ul.art-hmenu a:link {
+	position: relative; z-index: 11;
+}
+ul.art-hmenu a:visited {
+	position: relative; z-index: 11;
+}
+ul.art-hmenu a:hover {
+	position: relative; z-index: 11;
+}
+ul.art-hmenu {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; display: block; list-style-type: none;
+}
+ul.art-hmenu ul {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; display: block; list-style-type: none;
+}
+ul.art-hmenu li {
+	background: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; float: left; display: block; position: relative; z-index: 5;
+}
+ul.art-hmenu li:hover {
+	white-space: normal; z-index: 10000;
+}
+ul.art-hmenu::after {
+	height: 0px; overflow: hidden; clear: both; display: block; visibility: hidden; content: ".";
+}
+ul.art-hmenu ul::after {
+	height: 0px; overflow: hidden; clear: both; display: block; visibility: hidden; content: ".";
+}
+ul.art-hmenu {
+	min-height: 0px;
+}
+ul.art-hmenu ul {
+	min-height: 0px;
+}
+ul.art-hmenu {
+	vertical-align: bottom; display: inline-block;
+}
+.art-nav::before {
+	content: " ";
+}
+.art-hmenu-extra1 {
+	background-position: center; width: auto; height: auto; float: left; display: block; position: relative;
+}
+.art-hmenu-extra2 {
+	background-position: center; width: auto; height: auto; float: right; display: block; position: relative;
+}
+.art-hmenu {
+	float: left;
+}
+.art-menuitemcontainer {
+	margin: 0px auto;
+}
+ul.art-hmenu > li {
+	margin-left: 6px;
+}
+ul.art-hmenu > li:first-child {
+	margin-left: 3px;
+}
+ul.art-hmenu > li:last-child {
+	margin-right: 3px;
+}
+ul.art-hmenu > li.last-child {
+	margin-right: 3px;
+}
+ul.art-hmenu > li > a {
+	background: -ms-linear-gradient(rgb(47, 13, 9) 0px, rgb(213, 59, 42) 49%, rgb(247, 216, 212) 100%) no-repeat; margin: 0px auto; padding: 0px 17px; border-radius: 6px 6px 0px 0px; height: 31px; text-align: center; color: rgb(6, 42, 50); line-height: 31px; text-decoration: none; display: block; position: relative; cursor: pointer; -svg-background: linear-gradient(top, #2F0D09 0, #D53B2A 49%, #F7D8D4 100%) no-repeat; -webkit-border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0;
+}
+.art-hmenu a {
+	text-align: left; text-transform: uppercase; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.art-hmenu a:link {
+	text-align: left; text-transform: uppercase; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.art-hmenu a:visited {
+	text-align: left; text-transform: uppercase; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.art-hmenu a.active {
+	text-align: left; text-transform: uppercase; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.art-hmenu a:hover {
+	text-align: left; text-transform: uppercase; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none;
+}
+ul.art-hmenu > li > a.active {
+	background: -ms-linear-gradient(rgb(57, 54, 45) 0px, rgb(143, 135, 112) 38%, rgb(255, 255, 255) 100%) no-repeat; margin: 0px auto -5px; padding: 0px 17px 5px; border-radius: 6px 6px 0px 0px; color: rgb(69, 65, 54); text-decoration: none; -svg-background: linear-gradient(top, #39362D 0, #8F8770 38%, #FFFFFF 100%) no-repeat; -webkit-border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0;
+}
+ul.art-hmenu > li > a:visited {
+	text-decoration: none;
+}
+ul.art-hmenu > li > a:hover {
+	text-decoration: none;
+}
+ul.art-hmenu > li:hover > a {
+	text-decoration: none;
+}
+ul.art-hmenu > li > a:hover {
+	background: -ms-linear-gradient(rgb(4, 23, 27) 0px, rgb(29, 190, 226) 56%, rgb(187, 235, 246) 100%) no-repeat; margin: 0px auto; padding: 0px 17px; border-radius: 6px 6px 0px 0px; -svg-background: linear-gradient(top, #04171B 0, #1DBEE2 56%, #BBEBF6 100%) no-repeat; -webkit-border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0;
+}
+.desktop ul.art-hmenu > li:hover > a {
+	background: -ms-linear-gradient(rgb(4, 23, 27) 0px, rgb(29, 190, 226) 56%, rgb(187, 235, 246) 100%) no-repeat; margin: 0px auto; padding: 0px 17px; border-radius: 6px 6px 0px 0px; -svg-background: linear-gradient(top, #04171B 0, #1DBEE2 56%, #BBEBF6 100%) no-repeat; -webkit-border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0;
+}
+ul.art-hmenu > li > a:hover {
+	color: rgb(250, 231, 229); text-decoration: none;
+}
+.desktop ul.art-hmenu > li:hover > a {
+	color: rgb(250, 231, 229); text-decoration: none;
+}
+ul.art-hmenu > li > a.active:hover {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+ul.art-hmenu li li a {
+	background: none; margin: 0px auto; padding: 0px 17px; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px;
+}
+ul.art-hmenu li li {
+	width: auto; margin-top: 0px; margin-bottom: 0px; float: none;
+}
+.desktop ul.art-hmenu li li ul > li:first-child {
+	margin-top: 0px;
+}
+ul.art-hmenu li li ul > li:last-child {
+	margin-bottom: 0px;
+}
+.art-hmenu ul a {
+	margin: 0px; border: 0px solid transparent; border-image: none; height: 27px; text-align: left; color: rgb(11, 72, 86); line-height: 27px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; text-decoration: none; display: block; white-space: nowrap; min-width: 7em;
+}
+.art-hmenu ul a:link {
+	margin: 0px; text-align: left; color: rgb(11, 72, 86); line-height: 27px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; text-decoration: none;
+}
+.art-hmenu ul a:visited {
+	margin: 0px; text-align: left; color: rgb(11, 72, 86); line-height: 27px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; text-decoration: none;
+}
+.art-hmenu ul a.active {
+	margin: 0px; text-align: left; color: rgb(11, 72, 86); line-height: 27px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; text-decoration: none;
+}
+.art-hmenu ul a:hover {
+	margin: 0px; text-align: left; color: rgb(11, 72, 86); line-height: 27px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; text-decoration: none;
+}
+ul.art-hmenu ul li a:hover {
+	background: rgb(181, 176, 161); margin: 0px auto; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px;
+}
+.desktop ul.art-hmenu ul li:hover > a {
+	background: rgb(181, 176, 161); margin: 0px auto; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px;
+}
+.art-hmenu ul a:hover {
+	text-decoration: none;
+}
+.art-hmenu ul li a:hover {
+	color: rgb(0, 0, 0);
+}
+.desktop .art-hmenu ul li:hover > a {
+	color: rgb(0, 0, 0);
+}
+ul.art-hmenu ul::before {
+	background: rgb(226, 224, 218); margin: 0px auto; border-radius: 6px; border: 1px solid rgb(181, 176, 161); border-image: none; display: block; position: absolute; z-index: 1; content: " "; -webkit-border-radius: 6px; -moz-border-radius: 6px;
+}
+.desktop ul.art-hmenu li:hover > ul {
+	top: 100%; visibility: visible;
+}
+.desktop ul.art-hmenu li li:hover > ul {
+	left: 100%; top: 0px;
+}
+ul.art-hmenu ul {
+	left: 0px; top: 0px; visibility: hidden; position: absolute; z-index: 10; background-image: url("../images/spacer.gif");
+}
+.desktop ul.art-hmenu > li > ul {
+	margin: -10px 0px 0px -30px; padding: 12px 32px 32px;
+}
+.desktop ul.art-hmenu ul ul {
+	margin: -32px 0px 0px -9px; padding: 32px 32px 32px 14px;
+}
+.desktop ul.art-hmenu ul.art-hmenu-left-to-right {
+	margin: -10px 0px 0px -30px; left: 0px; right: auto;
+}
+.desktop ul.art-hmenu ul.art-hmenu-right-to-left {
+	margin: -10px -30px 0px 0px; left: auto; right: 0px;
+}
+.desktop ul.art-hmenu li li:hover > ul.art-hmenu-left-to-right {
+	left: 100%; right: auto;
+}
+.desktop ul.art-hmenu li li:hover > ul.art-hmenu-right-to-left {
+	left: auto; right: 100%;
+}
+.desktop ul.art-hmenu ul ul.art-hmenu-left-to-right {
+	margin: -32px 0px 0px -9px; padding: 32px 32px 32px 14px; left: 0px; right: auto;
+}
+.desktop ul.art-hmenu ul ul.art-hmenu-right-to-left {
+	margin: -32px -9px 0px 0px; padding: 32px 14px 32px 32px; left: auto; right: 0px;
+}
+.desktop ul.art-hmenu li ul > li:first-child {
+	margin-top: 0px;
+}
+.desktop ul.art-hmenu li ul > li:last-child {
+	margin-bottom: 0px;
+}
+.desktop ul.art-hmenu ul ul::before {
+	border-radius: 6px; left: 12px; top: 30px; right: 30px; bottom: 30px;
+}
+.desktop ul.art-hmenu > li > ul::before {
+	left: 30px; top: 10px; right: 30px; bottom: 30px;
+}
+.desktop ul.art-hmenu > li > ul.art-hmenu-left-to-right::before {
+	left: 30px; right: 30px;
+}
+.desktop ul.art-hmenu > li > ul.art-hmenu-right-to-left::before {
+	left: 30px; right: 30px;
+}
+.desktop ul.art-hmenu ul ul.art-hmenu-left-to-right::before {
+	left: 12px; right: 30px;
+}
+.desktop ul.art-hmenu ul ul.art-hmenu-right-to-left::before {
+	left: 30px; right: 12px;
+}
+.art-layout-wrapper {
+	margin: 0px auto; position: relative; z-index: auto !important;
+}
+.art-content-layout {
+	width: 100%; display: table; table-layout: fixed;
+}
+.art-content-layout-row {
+	display: table-row;
+}
+.art-layout-cell {
+	vertical-align: top; display: table-cell;
+}
+.art-postcontent .art-content-layout {
+	border-collapse: collapse;
+}
+.art-vmenublock {
+	background: rgb(230, 229, 224); margin: 7px; padding: 7px;
+}
+div.art-vmenublock img {
+	margin: 0px;
+}
+.art-vmenublockheader {
+	background: -ms-linear-gradient(rgb(187, 235, 246) 0px, rgb(29, 190, 226) 44%, rgb(4, 23, 27) 100%) no-repeat; border-width: 1px medium; border-style: solid none; border-color: rgb(15, 99, 117) currentColor; margin: 0px auto; padding: 8px 0px; border-image: none; -svg-background: linear-gradient(top, #BBEBF6 0, #1DBEE2 44%, #04171B 100%) no-repeat;
+}
+.art-vmenublockheader .t {
+	margin: 0px 10px; color: rgb(206, 202, 192); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px; font-style: normal; font-weight: normal;
+}
+.art-vmenublockheader .t a {
+	margin: 0px 10px; color: rgb(206, 202, 192); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px; font-style: normal; font-weight: normal;
+}
+.art-vmenublockheader .t a:link {
+	margin: 0px 10px; color: rgb(206, 202, 192); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px; font-style: normal; font-weight: normal;
+}
+.art-vmenublockheader .t a:visited {
+	margin: 0px 10px; color: rgb(206, 202, 192); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px; font-style: normal; font-weight: normal;
+}
+.art-vmenublockheader .t a:hover {
+	margin: 0px 10px; color: rgb(206, 202, 192); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 20px; font-style: normal; font-weight: normal;
+}
+.art-vmenublockheader .t::before {
+	bottom: 3px; line-height: 0; font-size: 0px; margin-right: 6px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/vmenublockheadericon.png');
+}
+.opera .art-vmenublockheader .t::before {
+	bottom: 0px;
+}
+.art-vmenublockcontent {
+	margin: 0px auto;
+}
+ul.art-vmenu {
+	list-style: none; display: block;
+}
+ul.art-vmenu ul {
+	list-style: none; display: block;
+}
+ul.art-vmenu {
+	margin: 0px; padding: 0px; width: auto; line-height: 0; display: block;
+}
+ul.art-vmenu li {
+	margin: 0px; padding: 0px; width: auto; line-height: 0; display: block;
+}
+ul.art-vmenu {
+	margin-top: 0px; margin-bottom: 0px;
+}
+ul.art-vmenu ul {
+	margin: 0px; padding: 0px; display: none; position: relative;
+}
+ul.art-vmenu ul.active {
+	display: block;
+}
+ul.art-vmenu > li > a {
+	margin: 0px auto; padding: 0px 15px; border-radius: 6px; color: rgb(0, 0, 0); line-height: 32px; min-height: 32px; -webkit-border-radius: 6px; -moz-border-radius: 6px;
+}
+ul.art-vmenu a {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; display: block; position: relative; z-index: 1; cursor: pointer;
+}
+ul.art-vmenu li {
+	position: relative;
+}
+ul.art-vmenu > li {
+	margin-top: 1px;
+}
+ul.art-vmenu > li > ul {
+	padding: 0px; margin-top: 0px; margin-bottom: 0px;
+}
+ul.art-vmenu > li:first-child {
+	margin-top: 0px;
+}
+ul.art-vmenu > li > a::before {
+	bottom: 2px; line-height: 0; font-size: 0px; margin-right: 5px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/vmenuitemicon.png');
+}
+.opera ul.art-vmenu > li > a::before {
+	bottom: 0px;
+}
+ul.art-vmenu > li > a.active::before {
+	bottom: 2px; line-height: 0; font-size: 0px; margin-right: 5px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/vmenuactiveitemicon.png');
+}
+.opera ul.art-vmenu > li > a.active::before {
+	bottom: 0px;
+}
+ul.art-vmenu > li > a:hover::before {
+	bottom: 2px; line-height: 0; font-size: 0px; margin-right: 5px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/vmenuhovereditemicon.png');
+}
+ul.art-vmenu > li > a.active:hover::before {
+	bottom: 2px; line-height: 0; font-size: 0px; margin-right: 5px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/vmenuhovereditemicon.png');
+}
+ul.art-vmenu > li:hover > a::before {
+	bottom: 2px; line-height: 0; font-size: 0px; margin-right: 5px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/vmenuhovereditemicon.png');
+}
+ul.art-vmenu > li:hover > a.active::before {
+	bottom: 2px; line-height: 0; font-size: 0px; margin-right: 5px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/vmenuhovereditemicon.png');
+}
+.opera ul.art-vmenu > li > a:hover::before {
+	bottom: 0px;
+}
+.opera ul.art-vmenu > li > a.active:hover::before {
+	bottom: 0px;
+}
+.opera ul.art-vmenu > li:hover > a::before {
+	bottom: 0px;
+}
+.opera ul.art-vmenu > li:hover > a.active::before {
+	bottom: 0px;
+}
+ul.art-vmenu > li > a:hover {
+	margin: 0px auto; padding: 0px 15px;
+}
+ul.art-vmenu > li > a.active:hover {
+	margin: 0px auto; padding: 0px 15px;
+}
+ul.art-vmenu > li > a:hover {
+	text-decoration: none;
+}
+ul.art-vmenu > li > a.active:hover {
+	text-decoration: none;
+}
+ul.art-vmenu a:hover {
+	color: rgb(192, 53, 38);
+}
+ul.art-vmenu a.active:hover {
+	color: rgb(192, 53, 38);
+}
+ul.art-vmenu > li > a.active:hover > span.border-top {
+	background-color: transparent;
+}
+ul.art-vmenu > li > a.active:hover > span.border-bottom {
+	background-color: transparent;
+}
+ul.art-vmenu > li > a.active {
+	margin: 0px auto; padding: 0px 15px; color: rgb(156, 149, 129); text-decoration: none;
+}
+ul.art-vmenu > li::after {
+	left: 0px; top: -1px; right: 0px; display: block; position: absolute; content: " ";
+}
+ul.art-vmenu > li > ul::after {
+	left: 0px; top: -1px; right: 0px; display: block; position: absolute; content: " ";
+}
+ul.art-vmenu > li::after {
+	height: 0px; border-bottom-color: rgb(199, 195, 184); border-bottom-width: 1px; border-bottom-style: solid; z-index: 1;
+}
+ul.art-vmenu > li > ul::after {
+	height: 0px; border-bottom-color: rgb(199, 195, 184); border-bottom-width: 1px; border-bottom-style: solid; z-index: 1;
+}
+ul.art-vmenu > li:first-child::before {
+	display: none;
+}
+ul.art-vmenu > li:first-child::after {
+	display: none;
+}
+ul.art-vmenu > li > ul::before {
+	background: none; margin: 0px auto; border-radius: 1px; left: 0px; top: 0px; right: 0px; bottom: 0px; display: block; position: absolute; content: " "; -webkit-border-radius: 1px; -moz-border-radius: 1px;
+}
+ul.art-vmenu li li a {
+	margin: 0px auto; position: relative;
+}
+ul.art-vmenu ul li {
+	margin: 0px; padding: 0px;
+}
+ul.art-vmenu li li {
+	margin-top: 1px; position: relative;
+}
+ul.art-vmenu ul a {
+	padding: 0px 27px; color: rgb(100, 94, 79); line-height: 28px; overflow: visible; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; margin-right: 0px; margin-left: 0px; display: block; position: relative; z-index: 0; min-height: 28px;
+}
+ul.art-vmenu ul a:visited {
+	color: rgb(100, 94, 79); line-height: 28px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; margin-right: 0px; margin-left: 0px;
+}
+ul.art-vmenu ul a.active:hover {
+	color: rgb(100, 94, 79); line-height: 28px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; margin-right: 0px; margin-left: 0px;
+}
+ul.art-vmenu ul a:hover {
+	color: rgb(100, 94, 79); line-height: 28px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; margin-right: 0px; margin-left: 0px;
+}
+ul.art-vmenu ul a.active {
+	color: rgb(100, 94, 79); line-height: 28px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; margin-right: 0px; margin-left: 0px;
+}
+ul.art-vmenu ul ul a {
+	padding-left: 54px;
+}
+ul.art-vmenu ul ul ul a {
+	padding-left: 81px;
+}
+ul.art-vmenu ul ul ul ul a {
+	padding-left: 108px;
+}
+ul.art-vmenu ul ul ul ul ul a {
+	padding-left: 135px;
+}
+ul.art-vmenu ul > li > a:hover {
+	background: rgba(233, 153, 144, 0.4); margin: 0px auto;
+}
+ul.art-vmenu ul > li > a.active:hover {
+	background: rgba(233, 153, 144, 0.4); margin: 0px auto;
+}
+ul.art-vmenu ul li a:hover {
+	color: rgb(215, 67, 51); text-decoration: none;
+}
+ul.art-vmenu ul li a.active:hover {
+	color: rgb(215, 67, 51); text-decoration: none;
+}
+ul.art-vmenu ul a:hover::after {
+	background-position: center;
+}
+ul.art-vmenu ul a.active:hover::after {
+	background-position: center;
+}
+ul.art-vmenu ul a.active::after {
+	background-position: bottom;
+}
+ul.art-vmenu ul > li > a.active {
+	background: rgba(224, 110, 97, 0.4); margin: 0px auto;
+}
+ul.art-vmenu ul a.active {
+	color: rgb(204, 57, 40); text-decoration: none;
+}
+ul.art-vmenu ul a:hover {
+	color: rgb(204, 57, 40); text-decoration: none;
+}
+ul.art-vmenu ul a.active:hover {
+	color: rgb(204, 57, 40); text-decoration: none;
+}
+ul.art-vmenu li li::after {
+	left: 0px; top: -1px; height: 0px; right: 0px; border-bottom-color: rgb(199, 195, 184); border-bottom-width: 1px; border-bottom-style: solid; display: block; position: absolute; z-index: 1; content: " ";
+}
+ul.art-vmenu li li::before {
+	left: 0px; top: -1px; height: 1px; right: 0px; display: block; position: absolute; z-index: 0; content: " ";
+}
+ul.art-vmenu > li > ul > li:first-child::before {
+	display: none;
+}
+ul.art-vmenu > li > ul > li:first-child::after {
+	display: none;
+}
+.art-block {
+	margin: 7px;
+}
+div.art-block img {
+	margin: 3px; border: 1px solid rgb(199, 195, 184); border-image: none;
+}
+.art-blockheader {
+	background: -ms-linear-gradient(rgba(192, 53, 38, 0.5) 0px, rgba(192, 53, 38, 0.5) 50%, rgba(187, 52, 37, 0.5) 60%, rgba(153, 43, 30, 0.5) 100%) no-repeat; margin: 0px auto; padding: 8px 3px; border: 1px solid rgb(128, 35, 25); border-image: none; -svg-background: linear-gradient(top, rgba(192, 53, 38, 0.5) 0, rgba(192, 53, 38, 0.5) 50%, rgba(187, 52, 37, 0.5) 60%, rgba(153, 43, 30, 0.5) 100%) no-repeat;
+}
+.art-blockheader .t {
+	margin: 0px 5px; color: rgb(0, 0, 0); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px; font-style: normal; font-weight: normal;
+}
+.art-blockheader .t a {
+	margin: 0px 5px; color: rgb(0, 0, 0); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px; font-style: normal; font-weight: normal;
+}
+.art-blockheader .t a:link {
+	margin: 0px 5px; color: rgb(0, 0, 0); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px; font-style: normal; font-weight: normal;
+}
+.art-blockheader .t a:visited {
+	margin: 0px 5px; color: rgb(0, 0, 0); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px; font-style: normal; font-weight: normal;
+}
+.art-blockheader .t a:hover {
+	margin: 0px 5px; color: rgb(0, 0, 0); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 15px; font-style: normal; font-weight: normal;
+}
+.art-blockheader .t::before {
+	bottom: 3px; line-height: 0; font-size: 0px; margin-right: 6px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/blockheadericon.png');
+}
+.opera .art-blockheader .t::before {
+	bottom: 0px;
+}
+.art-blockcontent {
+	margin: 0px auto; padding: 3px; color: rgb(71, 67, 56); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent table {
+	color: rgb(71, 67, 56); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent li {
+	color: rgb(71, 67, 56); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent a {
+	color: rgb(71, 67, 56); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent a:link {
+	color: rgb(71, 67, 56); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent a:visited {
+	color: rgb(71, 67, 56); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent a:hover {
+	color: rgb(71, 67, 56); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-blockcontent p {
+	margin: 0px 5px;
+}
+.art-blockcontent a {
+	color: rgb(213, 59, 42); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-blockcontent a:link {
+	color: rgb(213, 59, 42); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-blockcontent a:visited {
+	color: rgb(192, 188, 175); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-blockcontent a.visited {
+	color: rgb(192, 188, 175); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-blockcontent a:hover {
+	color: rgb(79, 204, 232); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-blockcontent a.hover {
+	color: rgb(79, 204, 232); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-block ul > li::before {
+	bottom: 2px; line-height: 0; font-size: 0px; margin-right: 6px; margin-left: -14px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/blockbullets.png');
+}
+.opera .art-block ul > li::before {
+	bottom: 0px;
+}
+.art-block li {
+	margin: 5px 0px 0px 10px; color: rgb(71, 67, 56); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-block ul > li {
+	padding: 0px;
+}
+.art-block ol {
+	padding: 0px;
+}
+.art-block ul > li {
+	padding-left: 14px;
+}
+.art-breadcrumbs {
+	margin: 0px auto;
+}
+a.art-button {
+	margin: 0px 5px 0px 0px !important; text-align: center; color: rgb(6, 42, 50); line-height: 21px; text-indent: 0px; overflow: visible; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; vertical-align: middle; display: inline-block; white-space: nowrap; position: relative; cursor: pointer; box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box;
+}
+a.art-button:link {
+	margin: 0px 5px 0px 0px !important; text-align: center; color: rgb(6, 42, 50); line-height: 21px; text-indent: 0px; overflow: visible; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; vertical-align: middle; display: inline-block; white-space: nowrap; position: relative; cursor: pointer; box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box;
+}
+a.art-button:link {
+	margin: 0px 5px 0px 0px !important; text-align: center; color: rgb(6, 42, 50); line-height: 21px; text-indent: 0px; overflow: visible; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; vertical-align: middle; display: inline-block; white-space: nowrap; position: relative; cursor: pointer; box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box;
+}
+body a.art-button:link {
+	margin: 0px 5px 0px 0px !important; text-align: center; color: rgb(6, 42, 50); line-height: 21px; text-indent: 0px; overflow: visible; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; vertical-align: middle; display: inline-block; white-space: nowrap; position: relative; cursor: pointer; box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box;
+}
+a.art-button:visited {
+	margin: 0px 5px 0px 0px !important; text-align: center; color: rgb(6, 42, 50); line-height: 21px; text-indent: 0px; overflow: visible; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; vertical-align: middle; display: inline-block; white-space: nowrap; position: relative; cursor: pointer; box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box;
+}
+body a.art-button:visited {
+	margin: 0px 5px 0px 0px !important; text-align: center; color: rgb(6, 42, 50); line-height: 21px; text-indent: 0px; overflow: visible; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; vertical-align: middle; display: inline-block; white-space: nowrap; position: relative; cursor: pointer; box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box;
+}
+input.art-button {
+	margin: 0px 5px 0px 0px !important; text-align: center; color: rgb(6, 42, 50); line-height: 21px; text-indent: 0px; overflow: visible; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; vertical-align: middle; display: inline-block; white-space: nowrap; position: relative; cursor: pointer; box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box;
+}
+button.art-button {
+	margin: 0px 5px 0px 0px !important; text-align: center; color: rgb(6, 42, 50); line-height: 21px; text-indent: 0px; overflow: visible; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-decoration: none; vertical-align: middle; display: inline-block; white-space: nowrap; position: relative; cursor: pointer; box-sizing: content-box; -webkit-box-sizing: content-box; -moz-box-sizing: content-box;
+}
+.art-button img {
+	margin: 0px; vertical-align: middle;
+}
+.firefox2 .art-button {
+	float: left; display: block;
+}
+input {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; vertical-align: middle;
+}
+select {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; vertical-align: middle;
+}
+textarea {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; vertical-align: middle;
+}
+a.art-search-button span {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; vertical-align: middle;
+}
+.art-block select {
+	width: 96%;
+}
+input.art-button {
+	float: none !important;
+}
+.active.art-button {
+	background: -ms-linear-gradient(rgba(145, 40, 29, 0.8) 0px, rgba(145, 40, 29, 0.8) 50%, rgba(141, 39, 28, 0.8) 60%, rgba(102, 28, 20, 0.8) 100%) no-repeat; margin: 0px auto; padding: 0px 5px; border: 1px dotted rgba(128, 35, 25, 0.8); border-image: none; box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.24); -svg-background: linear-gradient(top, rgba(145, 40, 29, 0.8) 0, rgba(145, 40, 29, 0.8) 50%, rgba(141, 39, 28, 0.8) 60%, rgba(102, 28, 20, 0.8) 100%) no-repeat; -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24); -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24);
+}
+.active.art-button:hover {
+	background: -ms-linear-gradient(rgba(145, 40, 29, 0.8) 0px, rgba(145, 40, 29, 0.8) 50%, rgba(141, 39, 28, 0.8) 60%, rgba(102, 28, 20, 0.8) 100%) no-repeat; margin: 0px auto; padding: 0px 5px; border: 1px dotted rgba(128, 35, 25, 0.8); border-image: none; box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.24); -svg-background: linear-gradient(top, rgba(145, 40, 29, 0.8) 0, rgba(145, 40, 29, 0.8) 50%, rgba(141, 39, 28, 0.8) 60%, rgba(102, 28, 20, 0.8) 100%) no-repeat; -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24); -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24);
+}
+.active.art-button {
+	color: rgb(244, 204, 200) !important;
+}
+.active.art-button:hover {
+	color: rgb(244, 204, 200) !important;
+}
+.hover.art-button {
+	background: -ms-linear-gradient(rgba(192, 53, 38, 0.8) 0px, rgba(192, 53, 38, 0.8) 50%, rgba(187, 52, 37, 0.8) 60%, rgba(153, 43, 30, 0.8) 100%) no-repeat; margin: 0px auto; padding: 0px 5px; border: 1px dotted rgba(128, 35, 25, 0.8); border-image: none; box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.24); -svg-background: linear-gradient(top, rgba(192, 53, 38, 0.8) 0, rgba(192, 53, 38, 0.8) 50%, rgba(187, 52, 37, 0.8) 60%, rgba(153, 43, 30, 0.8) 100%) no-repeat; -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24); -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24);
+}
+.art-button:hover {
+	background: -ms-linear-gradient(rgba(192, 53, 38, 0.8) 0px, rgba(192, 53, 38, 0.8) 50%, rgba(187, 52, 37, 0.8) 60%, rgba(153, 43, 30, 0.8) 100%) no-repeat; margin: 0px auto; padding: 0px 5px; border: 1px dotted rgba(128, 35, 25, 0.8); border-image: none; box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.24); -svg-background: linear-gradient(top, rgba(192, 53, 38, 0.8) 0, rgba(192, 53, 38, 0.8) 50%, rgba(187, 52, 37, 0.8) 60%, rgba(153, 43, 30, 0.8) 100%) no-repeat; -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24); -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24);
+}
+.hover.art-button {
+	color: rgb(31, 30, 25) !important;
+}
+.art-button:hover {
+	color: rgb(31, 30, 25) !important;
+}
+input[type='text'] {
+	background: rgb(255, 255, 255); margin: 0px auto; border-radius: 4px; border: 1px solid rgb(199, 195, 184); border-image: none; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+input[type='password'] {
+	background: rgb(255, 255, 255); margin: 0px auto; border-radius: 4px; border: 1px solid rgb(199, 195, 184); border-image: none; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+input[type='email'] {
+	background: rgb(255, 255, 255); margin: 0px auto; border-radius: 4px; border: 1px solid rgb(199, 195, 184); border-image: none; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+input[type='url'] {
+	background: rgb(255, 255, 255); margin: 0px auto; border-radius: 4px; border: 1px solid rgb(199, 195, 184); border-image: none; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+textarea {
+	background: rgb(255, 255, 255); margin: 0px auto; border-radius: 4px; border: 1px solid rgb(199, 195, 184); border-image: none; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+input[type='text'] {
+	padding: 4px 0px; width: 100%; color: rgb(71, 67, 56) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-shadow: none;
+}
+input[type='password'] {
+	padding: 4px 0px; width: 100%; color: rgb(71, 67, 56) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-shadow: none;
+}
+input[type='email'] {
+	padding: 4px 0px; width: 100%; color: rgb(71, 67, 56) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-shadow: none;
+}
+input[type='url'] {
+	padding: 4px 0px; width: 100%; color: rgb(71, 67, 56) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-shadow: none;
+}
+textarea {
+	padding: 4px 0px; width: 100%; color: rgb(71, 67, 56) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; text-shadow: none;
+}
+input.art-error {
+	background: rgb(255, 255, 255); margin: 0px auto; border: 1px solid rgb(226, 52, 29); border-image: none;
+}
+textarea.art-error {
+	background: rgb(255, 255, 255); margin: 0px auto; border: 1px solid rgb(226, 52, 29); border-image: none;
+}
+input.art-error {
+	color: rgb(71, 67, 56) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal;
+}
+textarea.art-error {
+	color: rgb(71, 67, 56) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal;
+}
+form.art-search input[type='text'] {
+	background: rgb(255, 255, 255); margin: 0px auto; padding: 4px 0px; border-radius: 4px; border: 1px solid rgb(199, 195, 184); border-image: none; width: 100%; color: rgb(71, 67, 56) !important; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+form.art-search {
+	margin: 5px; padding: 0px; border: 0px currentColor; border-image: none; left: 0px; top: 0px; line-height: 0; display: block; position: relative; background-image: none;
+}
+form.art-search input {
+	top: 0px; right: 0px;
+}
+a.art-search-button {
+	top: 0px; right: 0px;
+}
+form.art-search > input {
+	left: 0px; bottom: 0px; vertical-align: middle;
+}
+a.art-search-button {
+	left: 0px; bottom: 0px; vertical-align: middle;
+}
+form.art-search input[type='submit'] {
+	margin: 0px auto;
+}
+input.art-search-button {
+	margin: 0px auto;
+}
+a.art-search-button {
+	margin: 0px auto;
+}
+form.art-search input[type='submit'] {
+	background: url("../images/searchicon.png") no-repeat center; padding: 0px; border: currentColor; border-image: none; left: auto; width: 24px; height: 100%; color: rgb(6, 38, 45) !important; display: block; position: absolute; cursor: pointer;
+}
+input.art-search-button {
+	background: url("../images/searchicon.png") no-repeat center; padding: 0px; border: currentColor; border-image: none; left: auto; width: 24px; height: 100%; color: rgb(6, 38, 45) !important; display: block; position: absolute; cursor: pointer;
+}
+a.art-search-button {
+	background: url("../images/searchicon.png") no-repeat center; padding: 0px; border: currentColor; border-image: none; left: auto; width: 24px; height: 100%; color: rgb(6, 38, 45) !important; display: block; position: absolute; cursor: pointer;
+}
+a.art-search-button span.art-search-button-text {
+	display: none;
+}
+label.art-checkbox::before {
+	background: rgb(255, 255, 255); border-width: 0px; margin: 0px auto; border-radius: 1px; width: 16px; height: 16px; -webkit-border-radius: 1px; -moz-border-radius: 1px;
+}
+label.art-checkbox {
+	color: rgb(71, 67, 56) !important; line-height: 16px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; display: inline-block; cursor: pointer;
+}
+.art-checkbox > input[type='checkbox'] {
+	margin: 0px 5px 0px 0px;
+}
+label.active.art-checkbox::before {
+	background: rgb(93, 208, 234); border-width: 0px; margin: 0px auto; border-radius: 1px; width: 16px; height: 16px; display: inline-block; -webkit-border-radius: 1px; -moz-border-radius: 1px;
+}
+label.hovered.art-checkbox::before {
+	background: rgb(187, 219, 226); border-width: 0px; margin: 0px auto; border-radius: 1px; width: 16px; height: 16px; display: inline-block; -webkit-border-radius: 1px; -moz-border-radius: 1px;
+}
+label.art-radiobutton::before {
+	background: rgb(255, 255, 255); border-width: 0px; margin: 0px auto; border-radius: 3px; width: 12px; height: 12px; -webkit-border-radius: 3px; -moz-border-radius: 3px;
+}
+label.art-radiobutton {
+	color: rgb(71, 67, 56) !important; line-height: 12px; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; font-style: normal; font-weight: normal; display: inline-block; cursor: pointer;
+}
+.art-radiobutton > input[type='radio'] {
+	margin: 0px 5px 0px 0px; vertical-align: baseline;
+}
+label.active.art-radiobutton::before {
+	background: rgb(93, 208, 234); border-width: 0px; margin: 0px auto; border-radius: 3px; width: 12px; height: 12px; display: inline-block; -webkit-border-radius: 3px; -moz-border-radius: 3px;
+}
+label.hovered.art-radiobutton::before {
+	background: rgb(187, 219, 226); border-width: 0px; margin: 0px auto; border-radius: 3px; width: 12px; height: 12px; display: inline-block; -webkit-border-radius: 3px; -moz-border-radius: 3px;
+}
+.art-comments {
+	margin: 25px auto 0px; border-top-color: rgb(199, 195, 184); border-top-width: 1px; border-top-style: dotted;
+}
+.art-comments h2 {
+	color: rgb(71, 67, 56);
+}
+.art-comment-inner {
+	margin: 0px auto 0px 96px; padding: 5px; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px;
+}
+.art-comment-avatar {
+	background: rgb(255, 255, 255); padding: 2px; border: 1px solid rgb(93, 208, 234); border-image: none; width: 80px; height: 80px; float: left;
+}
+.art-comment-avatar > img {
+	margin: 0px !important; border: currentColor !important; border-image: none !important;
+}
+.art-comment-content {
+	padding: 10px 0px; color: rgb(71, 67, 56); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment {
+	margin-top: 6px;
+}
+:first-child.art-comment {
+	margin-top: 0px;
+}
+.art-comment-header {
+	color: rgb(71, 67, 56); line-height: 100%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-header a {
+	line-height: 100%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-header a:link {
+	line-height: 100%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-header a:visited {
+	line-height: 100%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-header a.visited {
+	line-height: 100%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-header a:hover {
+	line-height: 100%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-header a.hovered {
+	line-height: 100%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-header a {
+	color: rgb(106, 30, 21); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: normal; font-weight: bold;
+}
+.art-comment-header a:link {
+	color: rgb(106, 30, 21); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: normal; font-weight: bold;
+}
+.art-comment-header a:visited {
+	color: rgb(71, 67, 56); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-header a.visited {
+	color: rgb(71, 67, 56); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-header a:hover {
+	color: rgb(15, 95, 113); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-header a.hovered {
+	color: rgb(15, 95, 113); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a:link {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a:visited {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a.visited {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a:hover {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a.hovered {
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a {
+	color: rgb(106, 30, 21); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a:link {
+	color: rgb(106, 30, 21); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a:visited {
+	color: rgb(71, 67, 56); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a.visited {
+	color: rgb(71, 67, 56); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a:hover {
+	color: rgb(15, 95, 113); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-comment-content a.hovered {
+	color: rgb(15, 95, 113); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-pager {
+	margin: 2px; padding: 6px; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+.art-pager > *:last-child {
+	margin-right: 0px;
+}
+.art-pager > *:last-child:hover {
+	margin-right: 0px;
+}
+.art-pager > span {
+	cursor: default;
+}
+.art-pager > * {
+	background: rgb(151, 225, 242); margin: 0px 4px 0px 0px; padding: 10px; border-radius: 4px; display: inline-block; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px;
+}
+.art-pager a:link {
+	color: rgb(12, 80, 95); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-pager a:visited {
+	color: rgb(12, 80, 95); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-pager .active {
+	background: rgb(52, 196, 229); margin: 0px 4px 0px auto; padding: 10px; color: rgb(30, 8, 6);
+}
+.art-pager .more {
+	background: rgb(151, 225, 242); margin: 0px 4px 0px auto;
+}
+.art-pager a.more:link {
+	color: rgb(43, 12, 8);
+}
+.art-pager a.more:visited {
+	color: rgb(43, 12, 8);
+}
+.art-pager a:hover {
+	background: rgb(93, 208, 234); margin: 0px 4px 0px auto; padding: 10px;
+}
+.art-pager a:hover {
+	color: rgb(30, 8, 6); text-decoration: none;
+}
+.art-pager a.more:hover {
+	color: rgb(30, 8, 6); text-decoration: none;
+}
+.art-pager > *::after {
+	margin: 0px 0px 0px auto; top: 0px; width: 0px; height: 100%; right: 0px; text-decoration: none; display: inline-block; position: absolute; content: " ";
+}
+.art-pager > *:last-child::after {
+	display: none;
+}
+.art-commentsform {
+	background: none; margin: 25px auto 0px; padding: 10px; color: rgb(71, 67, 56);
+}
+.art-commentsform h2 {
+	margin: 0px; color: rgb(71, 67, 56); padding-bottom: 10px;
+}
+.art-commentsform label {
+	line-height: 25px; display: inline-block;
+}
+.art-commentsform input:not([type=submit]) {
+	width: 100%; max-width: 100%; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.art-commentsform textarea {
+	width: 100%; max-width: 100%; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.art-commentsform .form-submit {
+	margin-top: 10px;
+}
+.art-post {
+	background: none; margin: 5px; padding: 5px;
+}
+a img {
+	border: 0px currentColor; border-image: none;
+}
+.art-article img {
+	margin: 10px;
+}
+img.art-article {
+	margin: 10px;
+}
+.art-block img {
+	margin: 10px;
+}
+.art-footer img {
+	margin: 10px;
+}
+.art-metadata-icons img {
+	margin: 2px; border: currentColor; border-image: none; vertical-align: middle;
+}
+.art-article table {
+	margin: 1px; border-collapse: collapse;
+}
+table.art-article {
+	margin: 1px; border-collapse: collapse;
+}
+.art-post .art-content-layout-br {
+	height: 0px;
+}
+.art-article th {
+	padding: 2px; border: 1px solid rgb(161, 154, 135); border-image: none; text-align: left; vertical-align: top;
+}
+.art-article td {
+	padding: 2px; border: 1px solid rgb(161, 154, 135); border-image: none; text-align: left; vertical-align: top;
+}
+.art-article th {
+	padding: 7px; text-align: center; vertical-align: middle;
+}
+pre {
+	padding: 0.1em; overflow: auto;
+}
+.preview-cms-logo {
+	margin: 1em 1em 0px 0px; border: 0px currentColor; border-image: none; float: left;
+}
+.image-caption-wrapper {
+	padding: 10px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.image-caption-wrapper img {
+	margin: 0px !important; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.image-caption-wrapper div.art-collage {
+	margin: 0px !important; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.image-caption-wrapper p {
+	margin: 0px; text-align: right; font-size: 80%;
+}
+.art-postheader {
+	margin: 5px 10px; color: rgb(15, 95, 113); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 24px; font-style: normal; font-weight: normal;
+}
+.art-postheader a {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 24px; font-style: normal; font-weight: normal;
+}
+.art-postheader a:link {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 24px; font-style: normal; font-weight: normal;
+}
+.art-postheader a:visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 24px; font-style: normal; font-weight: normal;
+}
+.art-postheader a.visited {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 24px; font-style: normal; font-weight: normal;
+}
+.art-postheader a:hover {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 24px; font-style: normal; font-weight: normal;
+}
+.art-postheader a.hovered {
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; font-size: 24px; font-style: normal; font-weight: normal;
+}
+.art-postheader a {
+	text-align: left; color: rgb(192, 53, 38); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postheader a:link {
+	text-align: left; color: rgb(192, 53, 38); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postheader a:visited {
+	text-align: left; color: rgb(223, 106, 93); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postheader a.visited {
+	text-align: left; color: rgb(223, 106, 93); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postheader a:hover {
+	text-align: left; color: rgb(29, 190, 226); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postheader a.hovered {
+	text-align: left; color: rgb(29, 190, 226); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postmetadataheader {
+	background: rgba(226, 224, 218, 0.5); margin: 5px auto 0px; padding: 1px; position: relative; z-index: 1;
+}
+.art-postheadericons {
+	color: rgb(63, 59, 49); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postheadericons a {
+	color: rgb(63, 59, 49); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postheadericons a:link {
+	color: rgb(63, 59, 49); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postheadericons a:visited {
+	color: rgb(63, 59, 49); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postheadericons a:hover {
+	color: rgb(63, 59, 49); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postheadericons {
+	margin: 0px 0px 0px 10px; padding: 1px;
+}
+.art-postheadericons a {
+	color: rgb(19, 121, 144); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postheadericons a:link {
+	color: rgb(19, 121, 144); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-postheadericons a:visited {
+	color: rgb(19, 121, 144); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.art-postheadericons a.visited {
+	color: rgb(19, 121, 144); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: normal; font-weight: normal; text-decoration: none;
+}
+.art-postheadericons a:hover {
+	color: rgb(25, 159, 190); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: normal; font-weight: normal; text-decoration: underline;
+}
+.art-postheadericons a.hover {
+	color: rgb(25, 159, 190); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: normal; font-weight: normal; text-decoration: underline;
+}
+.art-postdateicon::before {
+	bottom: auto; line-height: 0; font-size: 0px; margin-right: 6px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/postdateicon.png');
+}
+.opera .art-postdateicon::before {
+	bottom: 0px;
+}
+.art-postauthoricon::before {
+	bottom: auto; line-height: 0; font-size: 0px; margin-right: 6px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/postauthoricon.png');
+}
+.opera .art-postauthoricon::before {
+	bottom: 0px;
+}
+.art-postprinticon::before {
+	bottom: auto; line-height: 0; font-size: 0px; margin-right: 6px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/system/printButton.png');
+}
+.opera .art-postprinticon::before {
+	bottom: 0px;
+}
+.art-postediticon::before {
+	bottom: auto; line-height: 0; font-size: 0px; margin-right: 6px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/system/edit.png');
+}
+.opera .art-postediticon::before {
+	bottom: 0px;
+}
+.art-postcontent ul > li::before {
+	bottom: 2px; line-height: 0; font-size: 0px; margin-right: 6px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/postbullets.png');
+}
+.art-post ul > li::before {
+	bottom: 2px; line-height: 0; font-size: 0px; margin-right: 6px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/postbullets.png');
+}
+.art-textblock ul > li::before {
+	bottom: 2px; line-height: 0; font-size: 0px; margin-right: 6px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/postbullets.png');
+}
+.opera .art-postcontent ul > li::before {
+	bottom: 0px;
+}
+.opera .art-post ul > li::before {
+	bottom: 0px;
+}
+.opera .art-textblock ul > li::before {
+	bottom: 0px;
+}
+.art-postcontent li {
+	margin: 3px 0px 0px 11px; color: rgb(71, 67, 56); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-post li {
+	margin: 3px 0px 0px 11px; color: rgb(71, 67, 56); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-textblock li {
+	margin: 3px 0px 0px 11px; color: rgb(71, 67, 56); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-postcontent ul > li {
+	padding: 0px;
+}
+.art-post ul > li {
+	padding: 0px;
+}
+.art-textblock ul > li {
+	padding: 0px;
+}
+.art-postcontent ol {
+	padding: 0px;
+}
+.art-post ol {
+	padding: 0px;
+}
+.art-textblock ol {
+	padding: 0px;
+}
+.art-postcontent ul > li {
+	padding-left: 14px;
+}
+.art-post ul > li {
+	padding-left: 14px;
+}
+.art-textblock ul > li {
+	padding-left: 14px;
+}
+.art-postcontent ul > li::before {
+	margin-left: -14px;
+}
+.art-post ul > li::before {
+	margin-left: -14px;
+}
+.art-textblock ul > li::before {
+	margin-left: -14px;
+}
+.art-postcontent ol {
+	margin: 1em 0px 1em 11px;
+}
+.art-post ol {
+	margin: 1em 0px 1em 11px;
+}
+.art-textblock ol {
+	margin: 1em 0px 1em 11px;
+}
+.art-postcontent ul {
+	margin: 1em 0px 1em 11px;
+}
+.art-post ul {
+	margin: 1em 0px 1em 11px;
+}
+.art-textblock ul {
+	margin: 1em 0px 1em 11px;
+}
+.art-postcontent li ol {
+	margin: 0.5em 0px 0.5em 11px;
+}
+.art-post li ol {
+	margin: 0.5em 0px 0.5em 11px;
+}
+.art-textblock li ol {
+	margin: 0.5em 0px 0.5em 11px;
+}
+.art-postcontent li ul {
+	margin: 0.5em 0px 0.5em 11px;
+}
+.art-post li ul {
+	margin: 0.5em 0px 0.5em 11px;
+}
+.art-textblock li ul {
+	margin: 0.5em 0px 0.5em 11px;
+}
+.art-postcontent li {
+	margin: 3px 0px 0px;
+}
+.art-post li {
+	margin: 3px 0px 0px;
+}
+.art-textblock li {
+	margin: 3px 0px 0px;
+}
+.art-postcontent ol > li {
+	overflow: visible;
+}
+.art-post ol > li {
+	overflow: visible;
+}
+.art-textblock ol > li {
+	overflow: visible;
+}
+.art-postcontent ul > li {
+	-ms-overflow-x: visible; -ms-overflow-y: hidden;
+}
+.art-post ul > li {
+	-ms-overflow-x: visible; -ms-overflow-y: hidden;
+}
+.art-textblock ul > li {
+	-ms-overflow-x: visible; -ms-overflow-y: hidden;
+}
+blockquote {
+	background: url("../images/postquote.png") no-repeat rgb(226, 224, 218); margin: 0px 0px 0px 10px; padding: 15px 15px 15px 39px; text-align: left; color: rgb(17, 16, 13); overflow: auto; clear: both; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+blockquote a {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-postcontent blockquote a {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-blockcontent blockquote a {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-footer blockquote a {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+blockquote a:link {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-postcontent blockquote a:link {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-blockcontent blockquote a:link {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-footer blockquote a:link {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+blockquote a:visited {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-postcontent blockquote a:visited {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-blockcontent blockquote a:visited {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-footer blockquote a:visited {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+blockquote a:hover {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-postcontent blockquote a:hover {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-blockcontent blockquote a:hover {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+.art-footer blockquote a:hover {
+	text-align: left; color: rgb(17, 16, 13); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-style: italic; font-weight: normal;
+}
+blockquote p {
+	margin: 5px 0px;
+}
+.art-postcontent blockquote p {
+	margin: 5px 0px;
+}
+.art-blockcontent blockquote p {
+	margin: 5px 0px;
+}
+.art-footer blockquote p {
+	margin: 5px 0px;
+}
+.Sorter img {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; width: 12px; height: 6px; vertical-align: middle; position: static; z-index: 1;
+}
+.Sorter a {
+	color: rgb(27, 175, 208); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; position: relative;
+}
+.Sorter a:link {
+	color: rgb(27, 175, 208); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.Sorter a:visited {
+	color: rgb(27, 175, 208); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.Sorter a.visited {
+	color: rgb(27, 175, 208); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.Sorter a:hover {
+	color: rgb(21, 133, 158); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.Sorter a.hover {
+	color: rgb(21, 133, 158); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.Sorter {
+	color: rgb(15, 95, 113); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+}
+.art-footer {
+	background: none; margin: 15px auto 0px; padding: 20px; text-align: center; color: rgb(9, 61, 72); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px; border-top-color: rgb(199, 195, 184); border-top-width: 1px; border-top-style: dotted; position: relative;
+}
+.art-footer a {
+	color: rgb(9, 61, 72); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-footer a:link {
+	color: rgb(9, 61, 72); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-footer a:visited {
+	color: rgb(9, 61, 72); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-footer a:hover {
+	color: rgb(9, 61, 72); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-footer td {
+	color: rgb(9, 61, 72); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-footer th {
+	color: rgb(9, 61, 72); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-footer caption {
+	color: rgb(9, 61, 72); line-height: 175%; font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-footer p {
+	padding: 0px; text-align: center;
+}
+.art-footer a {
+	color: rgb(213, 59, 42); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-footer a:link {
+	color: rgb(213, 59, 42); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-footer a:visited {
+	color: rgb(167, 161, 144); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: none;
+}
+.art-footer a:hover {
+	color: rgb(222, 102, 89); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; text-decoration: underline;
+}
+.art-footer h1 {
+	color: rgb(26, 171, 203); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+}
+.art-footer h2 {
+	color: rgb(52, 196, 229); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+}
+.art-footer h3 {
+	color: rgb(161, 154, 135); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+}
+.art-footer h4 {
+	color: rgb(199, 195, 184); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+}
+.art-footer h5 {
+	color: rgb(199, 195, 184); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+}
+.art-footer h6 {
+	color: rgb(199, 195, 184); font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+}
+.art-footer img {
+	margin: 0px; border: 1px solid rgb(199, 195, 184); border-image: none;
+}
+.art-rss-tag-icon {
+	background: url("../images/footerrssicon.png") no-repeat left; margin: 0px auto; text-indent: 35px; display: inline-block; min-height: 32px; min-width: 32px;
+}
+:empty.art-rss-tag-icon {
+	vertical-align: middle;
+}
+.art-facebook-tag-icon {
+	background: url("../images/footerfacebookicon.png") no-repeat left; margin: 0px auto; text-indent: 35px; display: inline-block; min-height: 32px; min-width: 32px;
+}
+:empty.art-facebook-tag-icon {
+	vertical-align: middle;
+}
+.art-twitter-tag-icon {
+	background: url("../images/footertwittericon.png") no-repeat left; margin: 0px auto; text-indent: 35px; display: inline-block; min-height: 32px; min-width: 32px;
+}
+:empty.art-twitter-tag-icon {
+	vertical-align: middle;
+}
+.art-footer ul > li::before {
+	bottom: 2px; line-height: 0; font-size: 0px; margin-right: 6px; margin-left: -10px; vertical-align: middle; display: inline-block; position: relative; content: url('../images/footerbullets.png');
+}
+.opera .art-footer ul > li::before {
+	bottom: 0px;
+}
+.art-footer li {
+	color: rgb(71, 67, 56); font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif; font-size: 13px;
+}
+.art-footer ul > li {
+	padding: 0px;
+}
+.art-footer ol {
+	padding: 0px;
+}
+.art-footer ul > li {
+	padding-left: 10px;
+}
+.art-page-footer {
+	color: rgb(15, 95, 113); letter-spacing: normal; font-family: Arial; font-size: 10px; font-style: normal; font-weight: normal; text-decoration: underline; word-spacing: normal;
+}
+.art-page-footer a {
+	color: rgb(15, 95, 113); letter-spacing: normal; font-family: Arial; font-size: 10px; font-style: normal; font-weight: normal; text-decoration: underline; word-spacing: normal;
+}
+.art-page-footer a:link {
+	color: rgb(15, 95, 113); letter-spacing: normal; font-family: Arial; font-size: 10px; font-style: normal; font-weight: normal; text-decoration: underline; word-spacing: normal;
+}
+.art-page-footer a:visited {
+	color: rgb(15, 95, 113); letter-spacing: normal; font-family: Arial; font-size: 10px; font-style: normal; font-weight: normal; text-decoration: underline; word-spacing: normal;
+}
+.art-page-footer a:hover {
+	color: rgb(15, 95, 113); letter-spacing: normal; font-family: Arial; font-size: 10px; font-style: normal; font-weight: normal; text-decoration: underline; word-spacing: normal;
+}
+.art-page-footer {
+	padding: 1em; text-align: center !important; color: rgb(71, 67, 56); text-decoration: none; position: relative; z-index: auto !important;
+}
+.art-lightbox-wrapper {
+	background: rgba(0, 0, 0, 0.8); padding: 0px 100px; left: 0px; top: 0px; text-align: center; right: 0px; bottom: 0px; position: fixed; z-index: 1000000;
+}
+.art-lightbox {
+	cursor: pointer;
+}
+.art-lightbox-wrapper .art-lightbox-image {
+	cursor: pointer;
+}
+.art-lightbox-wrapper .art-lightbox-image {
+	border-radius: 3px; border: 6px solid rgb(255, 255, 255); border-image: none; vertical-align: middle; display: none; max-width: 100%;
+}
+.art-lightbox-wrapper .active.art-lightbox-image {
+	display: inline-block;
+}
+.art-lightbox-wrapper .lightbox-error {
+	background: rgb(255, 255, 255); padding: 20px; border-radius: 10px; border: 1px solid rgb(180, 180, 180); border-image: none; width: 300px; height: 80px; position: fixed; z-index: 100; opacity: 0.95; box-shadow: 0px 2px 5px #333;
+}
+.art-lightbox-wrapper .loading {
+	background: url("../images/preloader-01.gif") no-repeat center rgb(255, 255, 255); padding: 10px; border-radius: 10px; border: 1px solid rgb(180, 180, 180); border-image: none; width: 32px; height: 32px; position: fixed; z-index: 10100; opacity: 0.5; box-shadow: 0px 2px 5px #333;
+}
+.art-lightbox-wrapper .arrow {
+	width: 82px; height: 100px; position: fixed; z-index: 10003; cursor: pointer; opacity: 0.5;
+}
+.art-lightbox-wrapper .left.arrow {
+	left: 9px;
+}
+.art-lightbox-wrapper .right.arrow {
+	right: 9px;
+}
+.art-lightbox-wrapper .arrow:hover {
+	opacity: 1;
+}
+.art-lightbox-wrapper .disabled.arrow {
+	display: none;
+}
+.art-lightbox-wrapper .arrow-t {
+	border-radius: 3px; left: 26px; width: 30px; height: 6px; position: relative; background-color: rgb(255, 255, 255);
+}
+.art-lightbox-wrapper .arrow-b {
+	border-radius: 3px; left: 26px; width: 30px; height: 6px; position: relative; background-color: rgb(255, 255, 255);
+}
+.art-lightbox-wrapper .arrow-t {
+	top: 38px;
+}
+.art-lightbox-wrapper .arrow-b {
+	top: 50px;
+}
+.art-lightbox-wrapper .close {
+	top: 30px; width: 22px; height: 22px; right: 39px; position: fixed; z-index: 10003; cursor: pointer; opacity: 0.5;
+}
+.art-lightbox-wrapper .close:hover {
+	opacity: 1;
+}
+.art-lightbox-wrapper .close .cw {
+	border-radius: 3px; left: -4px; top: 8px; width: 30px; height: 6px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.art-lightbox-wrapper .close .ccw {
+	border-radius: 3px; left: -4px; top: 8px; width: 30px; height: 6px; position: absolute; background-color: rgb(255, 255, 255);
+}
+.art-lightbox-wrapper .cw {
+	transform: rotate(45deg); -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg);
+}
+.art-lightbox-wrapper .ccw {
+	transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg);
+}
+.art-lightbox-wrapper .close-alt {
+	color: rgb(255, 255, 255); line-height: 100%; font-size: 2.5em; display: none;
+}
+.art-lightbox-wrapper .arrow-right-alt {
+	color: rgb(255, 255, 255); line-height: 100%; font-size: 2.5em; display: none;
+}
+.art-lightbox-wrapper .arrow-left-alt {
+	color: rgb(255, 255, 255); line-height: 100%; font-size: 2.5em; display: none;
+}
+.ie8 .art-lightbox-wrapper .close-alt {
+	display: block;
+}
+.ie8 .art-lightbox-wrapper .arrow-right-alt {
+	display: block;
+}
+.ie8 .art-lightbox-wrapper .arrow-left-alt {
+	display: block;
+}
+.ie8 .art-lightbox-wrapper .cw {
+	display: none;
+}
+.ie8 .art-lightbox-wrapper .ccw {
+	display: none;
+}
+.art-content-layout .art-sidebar1 {
+	background: none; margin: 0px auto; width: 20%;
+}
+.art-content-layout .art-content {
+	margin: 0px auto;
+}
+.art-content-layout .art-sidebar2 {
+	background: none; margin: 0px auto; width: 20%;
+}
+fieldset {
+	border: currentColor; border-image: none;
+}
+fieldset dl {
+	background: none; margin: 0px; padding: 0px; display: block;
+}
+fieldset dt {
+	background: none; margin: 0px; padding: 0px; width: 12em; height: 2em; line-height: 2em; overflow: hidden; clear: both; float: left; display: block; box-sizing: border-box; -moz-box-sizing: border-box;
+}
+fieldset dd {
+	background: none; margin: 0px 0px 0px 12em; padding: 0px; line-height: 2em; display: block; min-height: 2em;
+}
+fieldset label {
+	width: 12em; display: inline-block;
+}
+fieldset textarea {
+	vertical-align: text-top;
+}
+.img-fulltext-left {
+	margin: 0px 0.3em 0.3em 0px; padding: 0px; border: currentColor; border-image: none; float: left; display: block;
+}
+.img-intro-left {
+	margin: 0px 0.3em 0.3em 0px; padding: 0px; border: currentColor; border-image: none; float: left; display: block;
+}
+.img-fulltext-right {
+	margin: 0px 0px 0.3em 0.3em; padding: 0px; border: currentColor; border-image: none; float: right; display: block;
+}
+.img-intro-right {
+	margin: 0px 0px 0.3em 0.3em; padding: 0px; border: currentColor; border-image: none; float: right; display: block;
+}
+ul.pagenav {
+	list-style: none; margin: 0px; padding: 0px; clear: both; display: block;
+}
+ul.pagenav li {
+	background: none; margin: 0px; padding: 0px; width: 50%; text-align: center; display: block; content: normal;
+}
+ul.pagenav li::before {
+	background: none; margin: 0px; padding: 0px; width: 50%; text-align: center; display: block; content: normal;
+}
+ul.pagenav li.pagenav-prev {
+	float: left;
+}
+ul.pagenav li.pagenav-next {
+	margin: 0px 0px 0px 50%;
+}
+div.item-page dl.tabs {
+	margin: 0px; padding: 0px; display: block;
+}
+div.item-page dl.tabs::before {
+	width: 1em; height: 2em; overflow: hidden; float: left; display: block; box-sizing: border-box; -moz-box-sizing: border-box;
+}
+div.item-page dl.tabs dt {
+	height: 2em; overflow: hidden; border-top-color: rgb(161, 154, 135); border-left-color: rgb(161, 154, 135); border-top-width: 1px; border-left-width: 1px; border-top-style: solid; border-left-style: solid; float: left; display: block; box-sizing: border-box; -moz-box-sizing: border-box;
+}
+div.item-page dl.tabs dt h3 {
+	margin: 0px; padding: 0px 1em; line-height: 2em; overflow: hidden; font-size: 100%;
+}
+div.item-page dl.tabs dt h3 a {
+	text-decoration: none;
+}
+div.item-page dl.tabs::after {
+	height: 2em; overflow: hidden; border-left-color: rgb(161, 154, 135); border-left-width: 1px; border-left-style: solid; display: block; content: " "; box-sizing: border-box; -moz-box-sizing: border-box;
+}
+div.item-page div.current {
+	border: 1px solid rgb(161, 154, 135); border-image: none; clear: both;
+}
+div.item-page div.current dd.tabs {
+	margin: 0px; padding: 0px;
+}
+div.item-page .panel {
+	border: 1px solid rgb(161, 154, 135); border-image: none; margin-top: -1px;
+}
+div.item-page .panel h3 {
+	margin: 0px; padding: 0px;
+}
+div.item-page .panel h3 a {
+	padding: 6px; text-decoration: none; display: block;
+}
+div.item-page .panel h3.pane-toggler-down a {
+	border-bottom-color: rgb(161, 154, 135); border-bottom-width: 1px; border-bottom-style: solid;
+}
+div.item-page .panel .pane-slider {
+	margin: 0px; padding: 0px;
+}
+div.item-page div.pagination ul {
+	list-style: none; margin: 0px; padding: 0px; clear: both; display: block;
+}
+div.item-page div.pagination li {
+	margin: 0px; padding: 0px; width: 50%; text-align: center; float: left; display: block; white-space: nowrap;
+}
+div.item-page div.pagination::after {
+	height: 0px; clear: both; font-size: 0px; display: block; visibility: hidden; content: " ";
+}
+#searchForm .phrases-box {
+	float: left; display: block;
+}
+#searchForm .ordering-box {
+	text-align: right;
+}
+#searchForm .phrases-box label {
+	margin: 0px; padding: 0px 0.3em; width: auto; height: 2em; display: inline-block;
+}
+#searchForm .ordering-box label {
+	margin: 0px; padding: 0px 0.3em; width: auto; height: 2em; display: inline-block;
+}
+#searchForm .only label {
+	margin: 0px; padding: 0px 0.3em; width: auto; height: 2em; display: inline-block;
+}
+#mod-finder-searchform label {
+	display: block;
+}
+#mod-finder-searchform input.inputbox {
+	width: 100%; max-width: 300px; box-sizing: border-box; -moz-box-sizing: border-box;
+}
+#login-form #form-login-username label {
+	display: block;
+}
+#login-form #form-login-password label {
+	display: block;
+}
+#login-form #form-login-username input {
+	width: 100%; max-width: 300px; box-sizing: border-box; -moz-box-sizing: border-box;
+}
+#login-form #form-login-password input {
+	width: 100%; max-width: 300px; box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.breadcrumbs img {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+dl.stats-module {
+	margin: 0px; padding: 0.3em 0px 0.3em 0.3em;
+}
+dl.stats-module dt {
+	margin: 0px; padding: 0.3em 0.3em 0px 0px; width: 10em; line-height: 1.5em; font-weight: bold; float: left; display: block; min-height: 1.5em;
+}
+dl.stats-module dd {
+	line-height: 1.5em; display: block; min-height: 1.5em;
+}
+div.mod-languages ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+div.mod-languages li {
+	background: none; margin: 0px 0.3em; padding: 0px;
+}
+div.mod-languages ul.lang-inline li {
+	display: inline;
+}
+div.mod-languages ul.lang-block li {
+	display: block;
+}
+div.mod-languages img {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+div.clr {
+	clear: both;
+}
+#system-message ul li {
+	background-image: none;
+}
+ul.actions {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none; display: inline;
+}
+ul.actions li {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none; display: inline;
+}
+ul.actions li img {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none; display: inline;
+}
+ul.actions li {
+	background: none; list-style: none;
+}
+.items-row {
+	width: 100%; display: table; border-collapse: collapse; table-layout: fixed;
+}
+.items-row .item {
+	vertical-align: top; display: table-cell;
+}
+.items-row .row-separator {
+	display: none;
+}
+div.pagination p.counter {
+	background: none; margin: 0px 0.3em 0px 0px; padding: 0px; display: inline-block;
+}
+div.pagination ul {
+	background: none; list-style: none; margin: 0px; padding: 0px 0.3em; display: inline-block; content: normal;
+}
+div.pagination ul li {
+	background: none; list-style: none; margin: 0px; padding: 0px 0.3em; display: inline-block; content: normal;
+}
+div.pagination ul > li::before {
+	background: none; list-style: none; margin: 0px; padding: 0px 0.3em; display: inline-block; content: normal;
+}
+div.tip-wrap {
+	background: rgb(255, 255, 255); border: 1px solid rgb(170, 170, 170); border-image: none;
+}
+div.tip-wrap div.tip {
+	padding: 0.3em;
+}
+div.tip-wrap div.tip-title {
+	font-weight: bold;
+}
+table.category {
+	width: 100%;
+}
+table.category thead th img {
+	margin: 0px; padding: 0px 0px 0px 0.3em; border: currentColor; border-image: none;
+}
+span.hasTip a img {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+div.categories-list ul li span.item-title {
+	margin: 0px 0px 0.3em; display: block;
+}
+div.cat-children ul li span.item-title {
+	margin: 0px 0px 0.3em; display: block;
+}
+div.categories-list ul li div.category-desc {
+	margin: 0px 0px 0.3em;
+}
+div.cat-children ul li div.category-desc {
+	margin: 0px 0px 0.3em;
+}
+div.categories-list dl {
+	background: none; padding-right: 0px; padding-left: 0px; margin-right: 0px; margin-left: 0px; display: block;
+}
+div.cat-children dl {
+	background: none; padding-right: 0px; padding-left: 0px; margin-right: 0px; margin-left: 0px; display: block;
+}
+div.categories-list dl dt {
+	background: none; margin: 0px; padding: 0px; display: inline-block;
+}
+div.cat-children dl dt {
+	background: none; margin: 0px; padding: 0px; display: inline-block;
+}
+div.categories-list dl dd {
+	background: none; margin: 0px; padding: 0px; display: inline-block;
+}
+div.cat-children dl dd {
+	background: none; margin: 0px; padding: 0px; display: inline-block;
+}
+div.img_caption p.img_caption {
+	margin: 0px; padding: 0.3em 0px;
+}
+form .search label {
+	display: none;
+}
+form .finder label {
+	display: none;
+}
+.cols-2 .column-1 {
+	clear: right; float: left;
+}
+.cols-2 .column-2 {
+	clear: right; float: left;
+}
+.cols-3 .column-1 {
+	clear: right; float: left;
+}
+.cols-3 .column-2 {
+	clear: right; float: left;
+}
+.cols-3 .column-3 {
+	clear: right; float: left;
+}
+.cols-2 .column-1 {
+	width: 50%;
+}
+.cols-2 .column-2 {
+	width: 50%;
+}
+.cols-3 .column-1 {
+	width: 33%;
+}
+.cols-3 .column-2 {
+	width: 33%;
+}
+.cols-3 .column-3 {
+	width: 34%;
+}
+.row-separator {
+	clear: both; font-size: 1px; float: none; display: block;
+}
+ul.categories-module li h1 {
+	display: inline;
+}
+ul.categories-module li h2 {
+	display: inline;
+}
+ul.categories-module li h3 {
+	display: inline;
+}
+ul.categories-module li h4 {
+	display: inline;
+}
+ul.categories-module li h5 {
+	display: inline;
+}
+ul.categories-module li h6 {
+	display: inline;
+}

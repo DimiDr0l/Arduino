@@ -1,0 +1,123 @@
+.invalid {
+	border-color: rgb(255, 0, 0);
+}
+label.invalid {
+	color: rgb(255, 0, 0);
+}
+#editor-xtd-buttons {
+	padding: 5px;
+}
+.button2-left {
+	float: left;
+}
+.button2-right {
+	float: left;
+}
+.button2-left div {
+	float: left;
+}
+.button2-right div {
+	float: left;
+}
+.button2-left a {
+	height: 22px; color: rgb(102, 102, 102); line-height: 22px; font-size: 11px; float: left; display: block; cursor: pointer;
+}
+.button2-right a {
+	height: 22px; color: rgb(102, 102, 102); line-height: 22px; font-size: 11px; float: left; display: block; cursor: pointer;
+}
+.button2-left span {
+	height: 22px; color: rgb(102, 102, 102); line-height: 22px; font-size: 11px; float: left; display: block; cursor: pointer;
+}
+.button2-right span {
+	height: 22px; color: rgb(102, 102, 102); line-height: 22px; font-size: 11px; float: left; display: block; cursor: pointer;
+}
+.button2-left span {
+	color: rgb(153, 153, 153); cursor: default;
+}
+.button2-right span {
+	color: rgb(153, 153, 153); cursor: default;
+}
+.button2-left .page a {
+	padding: 0px 6px;
+}
+.button2-right .page a {
+	padding: 0px 6px;
+}
+.button2-left .page span {
+	padding: 0px 6px;
+}
+.button2-right .page span {
+	padding: 0px 6px;
+}
+.page span {
+	color: rgb(0, 0, 0); font-weight: bold;
+}
+.button2-left a:hover {
+	color: rgb(11, 85, 196); text-decoration: none;
+}
+.button2-right a:hover {
+	color: rgb(11, 85, 196); text-decoration: none;
+}
+.button2-left a {
+	padding: 0px 24px 0px 6px;
+}
+.button2-left span {
+	padding: 0px 24px 0px 6px;
+}
+.button2-right a {
+	padding: 0px 6px 0px 24px;
+}
+.button2-right span {
+	padding: 0px 6px 0px 24px;
+}
+.button2-left {
+	background: url("../images/j_button2_left.png") no-repeat; margin-left: 5px; float: left;
+}
+.button2-right {
+	background: url("../images/j_button2_right.png") no-repeat 100% 0px; margin-left: 5px; float: left;
+}
+.button2-left .image {
+	background: url("../images/j_button2_image.png") no-repeat 100% 0px;
+}
+.button2-left .readmore {
+	background: url("../images/j_button2_readmore.png") no-repeat 100% 0px;
+}
+.button2-left .article {
+	background: url("../images/j_button2_readmore.png") no-repeat 100% 0px;
+}
+.button2-left .pagebreak {
+	background: url("../images/j_button2_pagebreak.png") no-repeat 100% 0px;
+}
+.button2-left .blank {
+	background: url("../images/j_button2_blank.png") no-repeat 100% 0px;
+}
+div.tooltip {
+	background: rgb(255, 255, 204); padding: 5px; border: 1px solid rgb(212, 213, 170); border-image: none; float: left; z-index: 13000; max-width: 200px;
+}
+div.tooltip h4 {
+	background: url("../images/selector-arrow.png") no-repeat; margin: -15px 0px 0px; padding: 15px 0px 5px; font-size: 95%; font-weight: bold;
+}
+div.tooltip p {
+	margin: 0px; font-size: 90%;
+}
+.img_caption .left {
+	margin-right: 1em; float: left;
+}
+.img_caption .right {
+	margin-left: 1em; float: right;
+}
+.img_caption .left p {
+	text-align: center; clear: left;
+}
+.img_caption .right p {
+	text-align: center; clear: right;
+}
+.img_caption {
+	text-align: center !important;
+}
+.none.img_caption {
+	margin-right: auto; margin-left: auto;
+}
+a img.calendar {
+	background: url("../images/calendar.png") no-repeat; width: 16px; height: 16px; margin-left: 3px; vertical-align: middle; cursor: pointer;
+}

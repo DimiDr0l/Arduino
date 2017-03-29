@@ -1,0 +1,28 @@
+@import url( ../../../media/system/css/system.css );
+.system-unpublished {
+	background: rgb(232, 237, 241); border-top-color: rgb(196, 211, 223); border-bottom-color: rgb(196, 211, 223); border-top-width: 4px; border-bottom-width: 4px; border-top-style: solid; border-bottom-style: solid;
+}
+tr.system-unpublished {
+	background: rgb(232, 237, 241); border-top-color: rgb(196, 211, 223); border-bottom-color: rgb(196, 211, 223); border-top-width: 4px; border-bottom-width: 4px; border-top-style: solid; border-bottom-style: solid;
+}
+span.highlight {
+	padding: 1px 4px; font-weight: bold; background-color: rgb(255, 255, 204);
+}
+.img-fulltext-float-right {
+	margin-bottom: 10px; margin-left: 10px; float: right;
+}
+.img-fulltext-float-left {
+	margin-right: 10px; margin-bottom: 10px; float: left;
+}
+.img-fulltext-float-none {
+	
+}
+.img-intro-float-right {
+	margin-bottom: 5px; margin-left: 5px; float: right;
+}
+.img-intro-float-left {
+	margin-right: 5px; margin-bottom: 5px; float: left;
+}
+.img-intro-float-none {
+	
+}
