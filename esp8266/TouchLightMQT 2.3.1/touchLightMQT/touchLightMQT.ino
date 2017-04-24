@@ -16,8 +16,8 @@ ESP8266WebServer server(80);
 #define pinSCK 14 //SCLK 13
 #define pinSDI 13 //MOSI 11 (Master Out Slave In) - линия для передачи данных от ведущего устройства (Master) к ведомым (Slave)
 #define pinSDO 12 //MISO 12 (Master In Slave Out) - линия для передачи данных от ведомого устройства (Slave) к ведущему (Master)
-byte delayDimmer = 3, key = 0, m = 0, retries = 0;
-int16_t pwmLed1 = 500, pwmLed2 = 500, pwmlastLed1 = 500, pwmlastLed2 = 500;
+byte delayDimmer = 2, key = 0, m = 0;
+int16_t pwmLed1 = 500, pwmLed2 = 500, pwmlastLed1 = 500, pwmlastLed2 = 500, retries = 0;
 const int16_t maxrange = 1023; //max range PWM (max 1023)
 boolean onStateAll = false, stateM = false, stateAP = false, touchOn = false;
 unsigned long timer1 = 0, currentMillis;
@@ -171,6 +171,9 @@ void callbackmqt(char* topic, byte* payload, unsigned int length) {
 
 void setup() {
 	//Serial.begin(115200);
+	ESP.wdtDisable();
+	ESP.wdtFeed();
+	ESP.wdtEnable(1000);
 	pinMode (pinLed1, OUTPUT);
 	pinMode (pinLed2, OUTPUT);
 	pinMode (pinOut, INPUT);
@@ -239,31 +242,31 @@ void reconnect() {
 	}
 	
 	if (!stateAP) {
-		if (WiFi.status() == WL_CONNECTED) {
-			if (!client.connected()) {
-				Serial.print("Attempting MQTT connection...");
-				//Attempt to connect
-				if (client.connect(deviceID.c_str(), eloginmqt.c_str(), epassmqt.c_str())) {
-					Serial.println("connected");
-					pubConfig();
-					client.subscribe(prefix.c_str());                  // for receiving HELLO messages
-					client.subscribe((prefix + "/+/+/control/#").c_str()); // for receiving GPIO control messages
-					Serial.println("Subscribe: Success");
+		if (WiFi.status() == WL_CONNECTED && !client.connected()) {
+			Serial.print("Attempting MQTT connection...");
+			//Attempt to connect
+			if (client.connect(deviceID.c_str(), eloginmqt.c_str(), epassmqt.c_str())) {
+				Serial.println("connected");
+				pubConfig();
+				client.subscribe(prefix.c_str());                  // for receiving HELLO messages
+				client.subscribe((prefix + "/+/+/control/#").c_str()); // for receiving GPIO control messages
+				Serial.println("Subscribe: Success");
+				retries = 0;
+			} else {
+				Serial.print("Connect to MQTT server: FAIL ");
+				Serial.println(client.state());
+				Serial.println("Try again...");
+				delay (500);
+				retries ++;
+				if (retries >= 600) { //2-3 min
+					setupAP();
 					retries = 0;
-				} else {
-					Serial.print("Connect to MQTT server: FAIL ");
-					Serial.println(client.state());
-					Serial.println("Try again...");
-					retries ++;
-					if (retries >= 120) { //2-3 min
-						setupAP();
-						return;
-					}
+					return;
 				}
 			}
 		}
 	} else server.handleClient();
-	if (WiFi.status() == WL_CONNECTED) client.loop();
+	if (client.connected()) client.loop();
 }
 
 void setupAP() {
@@ -640,6 +643,7 @@ void AllOff() {
 		if (pwmLed2 - i >= 0) analogWrite (pinLed2, pwmLed2 - i);
 		delay (delayDimmer);
 	}
+	if (pwmLed1 < 200 && pwmLed2 < 200) delay (300);
 	stat[0] = stat0;
 	pubStatus(sTopic[0], stat[0]);
 	onStateAll = false;
