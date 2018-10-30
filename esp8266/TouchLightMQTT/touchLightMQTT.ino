@@ -1,13 +1,13 @@
 #include "ESP8266WiFi.h"
 //#include "ESP8266mDNS.h"
-#include "WiFiClient.h" //??? нужно ли
+#include "WiFiClient.h"
 #include "ESP8266WebServer.h"
 #include "PubSubClient.h"
 #include "EEPROM.h"
 
 ESP8266WebServer server(80);
 
-#define version "2.4"
+#define version "2.4.1"
 #define pinLed1 4 //pwm Led1
 #define pinLed2 5 //pwm Led2
 #define pinOut 2 //out pin
@@ -18,7 +18,7 @@ ESP8266WebServer server(80);
 byte delayDimmer = 2, key = 0, m = 0;
 int16_t pwmLed1 = 500, pwmLed2 = 500, pwmlastLed1 = 500, pwmlastLed2 = 500, retries = 0;
 const int16_t maxrange = 1023; //max range PWM (max 1023)
-boolean onStateAll = false, stateM = false, stateAP = false, stateOTA = false;
+boolean onStateAll = false, stateM = false, stateAP = false, stateOTA = false, onState = false;
 unsigned long timer1 = 0, timerwificonnect = 0, currentMillis;
 
 const char* apssid = "IoT SSID";
@@ -137,8 +137,10 @@ void callbackmqt(char* topic, byte* payload, unsigned int length) {
   } else if (topics == sTopic[0] + "/control/OTA") {
     String statap = "{\"status\":";
     statap += "\"start OTA\"}";
+    IPAddress ip = WiFi.localIP();
+    String ipStr = String(ip[0]) + '.' + String(ip[1]) + '.' + String(ip[2]) + '.' + String(ip[3]);
     pubStatus(sTopic[0], statap);
-	//pubStatus(sTopic[0], (WiFi.localIP).c_str);
+    pubStatus(sTopic[0], ipStr);
     stateOTA = true;
     setupAP();
 
@@ -187,7 +189,7 @@ void setup() {
   digitalWrite(pinLed1, LOW);
   digitalWrite(pinLed2, LOW);
 
-  //analogWriteFreq(5000); //задание частоты pwm Гц
+  analogWriteFreq(500); //задание частоты pwm Гц
   analogWriteRange(maxrange); //диапазон pwm
   set_Subtle_SPI(25); //установка чувствительности
   initVar(); //инициализация переменных
@@ -225,7 +227,6 @@ void loop() {
   reconnect();
   yield();
   //ESP.wdtFeed();
-
 }
 
 void reconnect() {
@@ -313,6 +314,9 @@ void createWebServer() {
     String ipStr = String(ip[0]) + '.' + String(ip[1]) + '.' + String(ip[2]) + '.' + String(ip[3]);
     content = "<!DOCTYPE HTML>\r\n<html><title>Setting ESP LED Lamp</title><center>Hello from ESP8266 at ";
     content += ipStr;
+    content += "<p>";
+    content += "Free memory: ";
+    content += ESP.getFreeHeap();
     content += "<p>";
     content += st;
     content += "</p><form action='setting'><label>SSID: </label><input name='ssid' length=32 value='";
@@ -421,17 +425,19 @@ void dRead() {
   if (!digitalRead(pinOut)) {
     //currentMillis = millis();
     key = readKey();
-    if (!onStateAll && (millis() >= (timer1))) { //70мс на удержание вкл
+    if (!onStateAll && (millis() >= timer1 + 70) && !onState) { //100мс на удержание вкл
+      onState = true;
       AllOn();
-      return;
+      //return;
     }
-    else if (onStateAll) {
+    else if (onStateAll && !onState) {
       if ((key == 134) || (key >= 1 && key <= 126)) {  //кнопка выкл
+        onState = true;
         AllOff();
-        return;
+        //return;
       }
-      if (key == 129 && !stateM) stateM = true; //кнопка меню
-      if (key == 130) { //кнопка вверх
+      else if (key == 129 && !stateM) stateM = true; //кнопка меню
+      else if (key == 130) { //кнопка вверх
         switch (m) {
           case 0:
             if (pwmLed1 < maxrange) {
@@ -456,10 +462,10 @@ void dRead() {
         }
         delay(delayDimmer);
       }
-      if (key == 128) { //кнопка вниз
+      else if (key == 128) { //кнопка вниз
         switch (m) {
           case 0:
-            if (pwmLed1 > 0) {
+            if (pwmLed1 > 1) {
               pwmLed1--;
               pwmLed2 = pwmLed1;
               analogWrite(pinLed1, pwmLed1);
@@ -517,43 +523,44 @@ void dRead() {
             break;
         }
       }
-      else if (key == 133) { //1/3 яркость
+      else if (key == 133) { //1/4 яркость
         switch (m) {
           case 0:
-            pwmLed1 = maxrange / 3;
+            pwmLed1 = maxrange / 4;
             pwmLed2 = pwmLed1;
             analogWrite(pinLed1, pwmLed1);
             analogWrite(pinLed2, pwmLed2);
             break;
           case 1:
-            pwmLed1 = maxrange / 3;
+            pwmLed1 = maxrange / 4;
             analogWrite(pinLed1, pwmLed1);
             break;
           case 2:
-            pwmLed2 = maxrange / 3;
+            pwmLed2 = maxrange / 4;
             analogWrite(pinLed2, pwmLed2);
             break;
         }
       }
-      else if (key == 131) { //1/8 яркости
+      else if (key == 131) { //min яркости
         switch (m) {
           case 0:
-            pwmLed1 = maxrange / 8;
+            pwmLed1 = 1;
             pwmLed2 = pwmLed1;
             analogWrite(pinLed1, pwmLed1);
             analogWrite(pinLed2, pwmLed2);
             break;
           case 1:
-            pwmLed1 = maxrange / 8;
+            pwmLed1 = 1;
             analogWrite(pinLed1, pwmLed1);
             break;
           case 2:
-            pwmLed2 = maxrange / 8;
+            pwmLed2 = 1;
             analogWrite(pinLed2, pwmLed2);
             break;
         }
       }
-      /*     else if (key >= 1 && key <= 126) {
+
+      /* else if (key >= 1 && key <= 126) {
         byte stateLight = map(key, 1, 126, 0, maxrange);
         switch (m) {
         case 0:
@@ -574,44 +581,51 @@ void dRead() {
         }
       */
     }
-    if (pwmlastLed1 != pwmLed1) {
-      stat[1] = setStatus(pwmLed1);
-      pubStatus(sTopic[1], stat[1]);
-    }
-    if (pwmlastLed2 != pwmLed2) {
-      stat[2] = setStatus(pwmLed2);
-      pubStatus(sTopic[2], stat[2]);
-    }
-    pwmlastLed1 = pwmLed1;
-    pwmlastLed2 = pwmLed2;
-  } else timer1 = millis() + 70;  //конец if digitalRead
 
-  if (stateM) {
-    stateM = false;
-    m++;
-    if (m > 3) m = 0;
-    switch (m) {
-      case 0:
-        pwmLed2 = pwmLed1;
-        analogWrite(pinLed1, pwmLed1);
-        analogWrite(pinLed2, pwmLed2);
-        break;
-      case 1:
-        //pwmLed2 = 0;
-        analogWrite(pinLed1, pwmLed1);
-        analogWrite(pinLed2, 0);
-        break;
-      case 2:
-        //pwmLed1 = 0;
-        analogWrite(pinLed1, 0);
-        analogWrite(pinLed2, pwmLed2);
-        break;
-      case 3:
-    if (pwmLed1 = pwmLed2) m = 0;
-        analogWrite(pinLed1, pwmLed1);
-        analogWrite(pinLed2, pwmLed2);
-        break;
+  }  //конец if digitalRead
+  else {
+    if (onStateAll) {
+      if (pwmlastLed1 != pwmLed1) {
+        stat[1] = setStatus(pwmLed1);
+        pubStatus(sTopic[1], stat[1]);
+      }
+      if (pwmlastLed2 != pwmLed2) {
+        stat[2] = setStatus(pwmLed2);
+        pubStatus(sTopic[2], stat[2]);
+      }
+      pwmlastLed1 = pwmLed1;
+      pwmlastLed2 = pwmLed2;
+
+      if (stateM) {
+        stateM = false;
+        m++;
+        if (m > 3) m = 0;
+        switch (m) {
+          case 0:
+            pwmLed2 = pwmLed1;
+            analogWrite(pinLed1, pwmLed1);
+            analogWrite(pinLed2, pwmLed2);
+            break;
+          case 1:
+            //pwmLed2 = 0;
+            analogWrite(pinLed1, pwmLed1);
+            analogWrite(pinLed2, 0);
+            break;
+          case 2:
+            //pwmLed1 = 0;
+            analogWrite(pinLed1, 0);
+            analogWrite(pinLed2, pwmLed2);
+            break;
+          case 3:
+            if (pwmLed1 = pwmLed2) m = 0;
+            analogWrite(pinLed1, pwmLed1);
+            analogWrite(pinLed2, pwmLed2);
+            break;
+        }
+      }
     }
+    if (onState) onState = false;
+    timer1 = millis();
   }
 }
 
