@@ -7,7 +7,8 @@
 
 ESP8266WebServer server(80);
 
-#define version "2.4.1"
+#define DEBUG_MODE false
+#define version "2.4.2"
 #define pinLed1 4 //pwm Led1
 #define pinLed2 5 //pwm Led2
 #define pinOut 2 //out pin
@@ -16,7 +17,7 @@ ESP8266WebServer server(80);
 #define pinSDI 13 //MOSI 11 (Master Out Slave In) - линия для передачи данных от ведущего устройства (Master) к ведомым (Slave)
 #define pinSDO 12 //MISO 12 (Master In Slave Out) - линия для передачи данных от ведомого устройства (Slave) к ведущему (Master)
 byte delayDimmer = 2, key = 0, m = 0;
-int16_t pwmLed1 = 500, pwmLed2 = 500, pwmlastLed1 = 500, pwmlastLed2 = 500, retries = 0;
+int16_t pwmLed1 = 250, pwmLed2 = 250, pwmlastLed1 = 250, pwmlastLed2 = 250, retries = 0;
 const int16_t maxrange = 1023; //max range PWM (max 1023)
 boolean onStateAll = false, stateM = false, stateAP = false, stateOTA = false, onState = false;
 unsigned long timer1 = 0, timerwificonnect = 0, currentMillis;
@@ -95,18 +96,18 @@ void initVar() {
 // send confirmation
 void pubStatus(String t, String payload) {
   if (client.publish((t + "/status").c_str(), payload.c_str())) {
-    Serial.println("Publish new status for " + t + ", value: " + payload);
+    if (DEBUG_MODE) Serial.println("Publish new status for " + t + ", value: " + payload);
   } else {
-    Serial.println("Publish new status for " + t + " FAIL!");
+    if (DEBUG_MODE) Serial.println("Publish new status for " + t + " FAIL!");
   }
 }
 void pubConfig() {
   client.publish((prefix + "/" + deviceID + "/config/Version").c_str(), version);
   for (int i = 0; i < nWidgets; i = i + 1) {
     if (client.publish((prefix + "/" + deviceID + "/config").c_str(), thing_config[i].c_str())) {
-      Serial.println("Publish config: Success (" + thing_config[i] + ")");
+      if (DEBUG_MODE) Serial.println("Publish config: Success (" + thing_config[i] + ")");
     } else {
-      Serial.println("Publish config FAIL! ("    + thing_config[i] + ")");
+      if (DEBUG_MODE) Serial.println("Publish config FAIL! ("    + thing_config[i] + ")");
     }
     delay(50);
   }
@@ -122,23 +123,24 @@ void callbackmqt(char* topic, byte* payload, unsigned int length) {
   for (int16_t i = 0; i < length; i++) {
     p += char(payload[i]);
   }
-  Serial.print("Get data from subscribed topic ");
-  Serial.print(topics);
-  Serial.print(" => ");
-  Serial.println(p);
+  if (DEBUG_MODE) {
+    Serial.print("Get data from subscribed topic ");
+    Serial.print(topics);
+    Serial.print(" => ");
+    Serial.println(p);
+  }
 
   if (topics == sTopic[0] + "/control") {
-    if (p == "0" && onStateAll) {
+    if ((p == "0" || p == "false") && onStateAll) {
       AllOff();
-    } else if (p == "1" && !onStateAll) {
+    } else if ((p == "1" || p == "true") && !onStateAll) {
       AllOn();
     }
 
   } else if (topics == sTopic[0] + "/control/OTA") {
     String statap = "{\"status\":";
     statap += "\"start OTA\"}";
-    IPAddress ip = WiFi.localIP();
-    String ipStr = String(ip[0]) + '.' + String(ip[1]) + '.' + String(ip[2]) + '.' + String(ip[3]);
+    String ipStr = (WiFi.localIP()).toString();
     pubStatus(sTopic[0], statap);
     pubStatus(sTopic[0], ipStr);
     stateOTA = true;
@@ -174,7 +176,7 @@ void callbackmqt(char* topic, byte* payload, unsigned int length) {
 }
 
 void setup() {
-  //Serial.begin(115200);
+  if (DEBUG_MODE) Serial.begin(115200);
   //ESP.wdtDisable();
   //ESP.wdtFeed();
   //ESP.wdtEnable(WDTO_8S);
@@ -191,7 +193,7 @@ void setup() {
 
   analogWriteFreq(500); //задание частоты pwm Гц
   analogWriteRange(maxrange); //диапазон pwm
-  set_Subtle_SPI(25); //установка чувствительности
+  set_Subtle_SPI(23); //установка чувствительности
   initVar(); //инициализация переменных
 
   WiFi.mode(WIFI_STA);
@@ -210,15 +212,17 @@ void setup() {
   client.setServer(eipmqt, eportmqt.toInt());
   client.setCallback(callbackmqt);
 
-  Serial.println("");
-  Serial.print("real chip size: ");
-  Serial.print(ESP.getFlashChipRealSize());
-  Serial.println(" Bytes");
-  Serial.print("SSID: ");
-  Serial.println(essid);
-  Serial.print("PASS: ");
-  Serial.println(epass);
-  Serial.println (ESP.getFreeHeap());
+  if (DEBUG_MODE) {
+    Serial.println("");
+    Serial.print("real chip size: ");
+    Serial.print(ESP.getFlashChipRealSize());
+    Serial.println(" Bytes");
+    Serial.print("SSID: ");
+    Serial.println(essid);
+    Serial.print("PASS: ");
+    Serial.println(epass);
+    Serial.println (ESP.getFreeHeap());
+  }
 
 }
 
@@ -236,7 +240,7 @@ void reconnect() {
       if (essid.length() > 0 && eipmqt[0] > 0) {
         WiFi.begin(essid.c_str(), epass.c_str());
         if (WiFi.waitForConnectResult() != WL_CONNECTED) {
-          Serial.print(".");
+          if (DEBUG_MODE) Serial.print(".");
           if (!stateAP) {
             retries ++;
             if (retries > 10) setupAP();
@@ -244,29 +248,32 @@ void reconnect() {
           }
           return;
         } else retries = 0;
-        Serial.println("WiFi connected");
-        Serial.println("IP address: ");
-        Serial.println(WiFi.localIP());
-        WiFi.printDiag(Serial);
+        if (DEBUG_MODE) {
+          Serial.println("WiFi connected");
+          Serial.println("IP address: ");
+          Serial.println(WiFi.localIP());
+          WiFi.printDiag(Serial);
+        }
       } else if (!stateAP) setupAP();
     } else if (!client.connected()) {
-      Serial.print("Attempting MQTT connection...");
+      if (DEBUG_MODE) Serial.print("Attempting MQTT connection...");
       //Attempt to connect
       if (client.connect(deviceID.c_str(), eloginmqt.c_str(), epassmqt.c_str())) {
         if (stateAP) {
           WiFi.mode(WIFI_STA);
           stateAP = false;
         }
-        Serial.println("connected");
         retries = 0;
         pubConfig();
         client.subscribe(prefix.c_str());           // for receiving HELLO messages
         client.subscribe((prefix + "/+/+/control/#").c_str());  // for receiving GPIO control messages
-        Serial.println("Subscribe: Success");
+        if (DEBUG_MODE) Serial.println("Subscribe: Success");
       } else {
-        Serial.print("Connect to MQTT server: FAIL ");
-        Serial.println(client.state());
-        Serial.println("Try again...");
+        if (DEBUG_MODE) {
+          Serial.print("Connect to MQTT server: FAIL ");
+          Serial.println(client.state());
+          Serial.println("Try again...");
+        }
         if (!stateAP) {
           retries ++;
           if (retries > 30) setupAP();
@@ -298,21 +305,24 @@ void setupAP() {
     st += "</li>";
   }
   st += "</ol>";
-  WiFi.softAP(apssid, appass); //-------------------------------------------------------
-  Serial.print("Start AP: \"");
-  Serial.print(apssid);
-  Serial.println("\"");
-  Serial.print("AP Password: \"");
-  Serial.print(appass);
-  Serial.println("\"");
+  WiFi.softAP(apssid, appass);
+  if (DEBUG_MODE) {
+    Serial.print("Start AP: \"");
+    Serial.print(apssid);
+    Serial.println("\"");
+    Serial.print("AP Password: \"");
+    Serial.print(appass);
+    Serial.println("\"");
+  }
 
 }
 
 void createWebServer() {
   server.on("/", []() {
-    IPAddress ip = WiFi.localIP();
-    String ipStr = String(ip[0]) + '.' + String(ip[1]) + '.' + String(ip[2]) + '.' + String(ip[3]);
-    content = "<!DOCTYPE HTML>\r\n<html><title>Setting ESP LED Lamp</title><center>Hello from ESP8266 at ";
+    String ipStr = (WiFi.localIP()).toString();
+    content = "<!DOCTYPE HTML>\r\n<html><title>Setting ESP LED Lamp</title><center>Hello from ESP8266 ver ";
+    content += version;
+    content += " at ";
     content += ipStr;
     content += "<p>";
     content += "Free memory: ";
@@ -425,7 +435,7 @@ void dRead() {
   if (!digitalRead(pinOut)) {
     //currentMillis = millis();
     key = readKey();
-    if (!onStateAll && (millis() >= timer1 + 70) && !onState) { //100мс на удержание вкл
+    if (!onStateAll && (millis() >= timer1 + 100) && !onState) { //100мс на удержание вкл
       onState = true;
       AllOn();
       //return;
@@ -588,10 +598,12 @@ void dRead() {
       if (pwmlastLed1 != pwmLed1) {
         stat[1] = setStatus(pwmLed1);
         pubStatus(sTopic[1], stat[1]);
+		if (pwmLed1 == 0) m = 2;
       }
       if (pwmlastLed2 != pwmLed2) {
         stat[2] = setStatus(pwmLed2);
         pubStatus(sTopic[2], stat[2]);
+		if (pwmLed2 == 0) m = 1;
       }
       pwmlastLed1 = pwmLed1;
       pwmlastLed2 = pwmLed2;
@@ -661,7 +673,7 @@ void AllOff() {
 }
 
 void restart() {
-  Serial.println("Will reset and try again...");
+  if (DEBUG_MODE) Serial.println("Will reset and try again...");
   ESP.reset();
 }
 
