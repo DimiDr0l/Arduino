@@ -7,8 +7,8 @@
 
 ESP8266WebServer server(80);
 
-#define DEBUG_MODE false
-#define version "2.4.2"
+#define DEBUG_MODE true
+#define version "2.4.3"
 #define pinLed1 4 //pwm Led1
 #define pinLed2 5 //pwm Led2
 #define pinOut 2 //out pin
@@ -39,22 +39,26 @@ WiFiClient wclient;
 PubSubClient client(wclient);
 
 String prefix   = "/IoTmanager";     // global prefix for all topics - must be some as mobile device
-String deviceID = "dev01-bedroom";   // thing ID - unique device id in our project
+String deviceID = "dev01-bedroom2";   // thing ID - unique device id in our project
 
 const String stat1 = "{\"status\":\"1\"}";
 const String stat0 = "{\"status\":\"0\"}";
 
 const int nWidgets = 3;
-String stat        [nWidgets];
-String sTopic      [nWidgets];
-String color       [nWidgets];
-String style       [nWidgets];
-String badge       [nWidgets];
-String widget      [nWidgets];
-String descr       [nWidgets];
-String page        [nWidgets];
-String thing_config[nWidgets];
-String id          [nWidgets];
+String id             [nWidgets];
+String stat           [nWidgets];
+String sTopic         [nWidgets];
+String tTopic         [nWidgets];
+String color          [nWidgets];
+String style          [nWidgets];
+String badge          [nWidgets];
+String widget         [nWidgets];
+String descr          [nWidgets];
+String page           [nWidgets];
+String thing_config   [nWidgets];
+String icon           [nWidgets];
+String sMax           [nWidgets];
+
 
 String setStatus ( int s ) {
   String stat = "{\"status\":\"" + String(s) + "\"}";
@@ -62,35 +66,43 @@ String setStatus ( int s ) {
 }
 
 void initVar() {
-  id    [0] = "0";
-  page  [0] = "Bedroom";
-  descr [0] = "Свет в комнате";
-  widget[0] = "toggle";
-  sTopic[0]   = prefix + "/" + deviceID + "/light0";
-  color[0]   = "\"color\":\"green\"";            // black, blue, green, orange, red, white, yellow (off - grey)
-  stat[0] = stat0;                      // defaultVal status Off
+  id      [0] = "\"id\":\"0\"";;
+  page    [0] = "\"page\":\"Bedroom\"";
+  descr   [0] = "\"descr\":\"Свет в комнате\"";
+  widget  [0] = "\"widget\":\"toggle\"";
+  sTopic  [0] = prefix + "/" + deviceID + "/light0";
+  tTopic  [0] = "\"topic\":\"" + sTopic[0] + "\"";
+  color   [0] = "\"color\":\"green\"";
+  icon    [0] = "\"icon\":\"sunny\",\"iconOff\":\"moon\"";
+  stat    [0] = stat0;
 
-  id    [1] = "1";
-  page  [1] = "Bedroom";
-  descr [1] = "Zone1";
-  widget[1] = "range";
-  sTopic[1]   = prefix + "/" + deviceID + "/dim-light1";
-  style[1]   = "\"style\":\"range-calm\"";          // see http://ionicframework.com/docs/components/#colors
-  badge[1]   = "\"badge\":\"badge-assertive\"";       // see http://ionicframework.com/docs/components/#colors
-  stat[1] = setStatus(pwmLed1);               // defaultVal status light1
+  id      [1] = "\"id\":\"1\"";
+  page    [1] = "\"page\":\"Bedroom\"";
+  descr   [1] = "\"descr\":\"Zone1\"";
+  widget  [1] = "\"widget\":\"range\"";
+  sTopic  [1] = prefix + "/" + deviceID + "/dim-light1";
+  tTopic  [1] = "\"topic\":\"" + sTopic[1] + "\"";
+  style   [1] = "\"style\":\"range-calm\"";
+  badge   [1] = "\"badge\":\"badge-assertive\"";
+  stat    [1] = setStatus(pwmLed1);
+  sMax    [1] = "\"max\":\"1023\"";
+  color   [1] = "\"color\":\"orange\"";
 
-  id    [2] = "2";
-  page  [2] = "Bedroom";
-  descr [2] = "Zone2";
-  widget[2] = "range";
-  sTopic[2]   = prefix + "/" + deviceID + "/dim-light0";
-  style[2]   = "\"style\":\"range-calm\"";                 // see http://ionicframework.com/docs/components/#colors
-  badge[2]   = "\"badge\":\"badge-assertive\"";            // see http://ionicframework.com/docs/components/#colors
-  stat[2] = setStatus(pwmLed2);             // defaultVal status light2
+  id      [2] = "\"id\":\"2\"";;
+  page    [2] = "\"page\":\"Bedroom\"";
+  descr   [2] = "\"descr\":\"Zone2\"";
+  widget  [2] = "\"widget\":\"range\"";
+  sTopic  [2] = prefix + "/" + deviceID + "/dim-light0";
+  tTopic  [2] = "\"topic\":\"" + sTopic[2] + "\"";
+  style   [2] = "\"style\":\"range-calm\"";
+  badge   [2] = "\"badge\":\"badge-assertive\"";
+  stat    [2] = setStatus(pwmLed2);
+  sMax    [2] = "\"max\":\"1023\"";
+  color   [2] = "\"color\":\"orange\"";
 
-  thing_config[0] = "{\"id\":\"" + id[0] + "\",\"page\":\"" + page[0] + "\",\"descr\":\"" + descr[0] + "\",\"widget\":\"" + widget[0] + "\",\"topic\":\"" + sTopic[0] + "\"," + color[0] + "}"; // GPIO switched On/Off by mobile widget toggle
-  thing_config[1] = "{\"id\":\"" + id[1] + "\",\"page\":\"" + page[1] + "\",\"descr\":\"" + descr[1] + "\",\"widget\":\"" + widget[1] + "\",\"topic\":\"" + sTopic[1] + "\"," + style[1] + "," + badge[1] + "}";
-  thing_config[2] = "{\"id\":\"" + id[2] + "\",\"page\":\"" + page[2] + "\",\"descr\":\"" + descr[2] + "\",\"widget\":\"" + widget[2] + "\",\"topic\":\"" + sTopic[2] + "\"," + style[2] + "," + badge[2] + "}";
+  thing_config[0] = "{" + id[0] + "," + page[0] + "," + descr[0] + "," + widget[0] + "," + tTopic[0] + "," + color[0] + "," + icon[0]+ "}";
+  thing_config[1] = "{" + id[1] + "," + page[1] + "," + descr[1] + "," + widget[1] + "," + tTopic[1] + "," + color[1] + "," + sMax[1] + "," + style[1] + "," + badge[1] + "}";
+  thing_config[2] = "{" + id[2] + "," + page[2] + "," + descr[2] + "," + widget[2] + "," + tTopic[2] + "," + color[2] + "," + sMax[2] + "," + style[2] + "," + badge[2] + "}";
 
 }
 // send confirmation
@@ -201,14 +213,24 @@ void setup() {
   EEPROM.begin(512);
   delay(10);
   // read eeprom
-  EEPROM.commit();
-  for (int16_t i = 0; i < 32; ++i) essid += char(EEPROM.read(i));
-  for (int16_t i = 32; i < 64; ++i) epass += char(EEPROM.read(i));
-  for (int16_t i = 64; i < 68; ++i) eipmqt[i - 64] = EEPROM.read(i); //чтение 4 ячеек памяти для ип адреса
-  for (int16_t i = 96; i < 101; ++i) eportmqt += char(EEPROM.read(i));
-  for (int16_t i = 101; i < 133; ++i) eloginmqt += char(EEPROM.read(i));
-  for (int16_t i = 133; i < 165; ++i) epassmqt += char(EEPROM.read(i));
+  // EEPROM.commit();
+  // for (int16_t i = 0; i < 32; ++i) essid += char(EEPROM.read(i));
+  // for (int16_t i = 32; i < 64; ++i) epass += char(EEPROM.read(i));
+  // for (int16_t i = 64; i < 68; ++i) eipmqt[i - 64] = EEPROM.read(i); //чтение 4 ячеек памяти для ип адреса
+  // for (int16_t i = 96; i < 101; ++i) eportmqt += char(EEPROM.read(i));
+  // for (int16_t i = 101; i < 133; ++i) eloginmqt += char(EEPROM.read(i));
+  // for (int16_t i = 133; i < 165; ++i) epassmqt += char(EEPROM.read(i));
 
+  essid = "/n %10 Sky Net";
+  epass = "1qaz2wsx3edc4";
+  eipmqt[0] = 192;
+  eipmqt[1] = 168;
+  eipmqt[2] = 1;
+  eipmqt[3] = 200;
+  eportmqt = "1883";
+  eloginmqt = "smart";
+  epassmqt = "1qaz@WSX";
+  
   client.setServer(eipmqt, eportmqt.toInt());
   client.setCallback(callbackmqt);
 
@@ -243,7 +265,10 @@ void reconnect() {
           if (DEBUG_MODE) Serial.print(".");
           if (!stateAP) {
             retries ++;
-            if (retries > 10) setupAP();
+            if (retries > 10) {
+              // setupAP();
+              restart();
+            }
             //retries = 0;
           }
           return;
@@ -598,12 +623,12 @@ void dRead() {
       if (pwmlastLed1 != pwmLed1) {
         stat[1] = setStatus(pwmLed1);
         pubStatus(sTopic[1], stat[1]);
-		if (pwmLed1 == 0) m = 2;
+    if (pwmLed1 == 0) m = 2;
       }
       if (pwmlastLed2 != pwmLed2) {
         stat[2] = setStatus(pwmLed2);
         pubStatus(sTopic[2], stat[2]);
-		if (pwmLed2 == 0) m = 1;
+    if (pwmLed2 == 0) m = 1;
       }
       pwmlastLed1 = pwmLed1;
       pwmlastLed2 = pwmLed2;
@@ -676,4 +701,5 @@ void restart() {
   if (DEBUG_MODE) Serial.println("Will reset and try again...");
   ESP.reset();
 }
+
 
