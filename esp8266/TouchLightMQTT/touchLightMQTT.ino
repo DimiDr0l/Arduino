@@ -4,11 +4,12 @@
 #include "ESP8266WebServer.h"
 #include "PubSubClient.h"
 #include "EEPROM.h"
+#include "Updater.h"
 
 ESP8266WebServer server(80);
 
 #define DEBUG_MODE true
-#define version "2.4.3"
+#define version "2.4.4"
 #define pinLed1 4 //pwm Led1
 #define pinLed2 5 //pwm Led2
 #define pinOut 2 //out pin
@@ -23,7 +24,22 @@ boolean onStateAll = false, stateM = false, stateAP = false, stateOTA = false, o
 unsigned long timer1 = 0, timerwificonnect = 0, currentMillis;
 
 const char* apssid = "IoT SSID";
-const char* appass = "12345678";
+const char* appass = "122333444455555";
+const char* webUser = "admin";
+
+const int16_t EEPROM_SIZE = 512;
+const int16_t EEPROM_CONFIG_SIZE = 165;
+const int16_t EEPROM_SSID = 0;
+const int16_t EEPROM_WIFI_PASS = 32;
+const int16_t EEPROM_MQTT_IP = 64;
+const int16_t EEPROM_MQTT_PORT = 96;
+const int16_t EEPROM_MQTT_LOGIN = 101;
+const int16_t EEPROM_MQTT_PASS = 133;
+const byte WIFI_SSID_LEN = 32;
+const byte WIFI_PASS_LEN = 32;
+const byte MQTT_PORT_LEN = 5;
+const byte MQTT_LOGIN_LEN = 32;
+const byte MQTT_PASS_LEN = 32;
 
 String st;
 String content;
@@ -63,6 +79,61 @@ String sMax           [nWidgets];
 String setStatus ( int s ) {
   String stat = "{\"status\":\"" + String(s) + "\"}";
   return stat;
+}
+
+String readEEPROMString(int16_t start, byte maxLen) {
+  String value = "";
+  value.reserve(maxLen);
+  for (byte i = 0; i < maxLen; ++i) {
+    byte data = EEPROM.read(start + i);
+    if (data == 0 || data == 255) break;
+    value += char(data);
+  }
+  return value;
+}
+
+void writeEEPROMString(int16_t start, byte maxLen, const String& value) {
+  byte len = min((unsigned int)value.length(), (unsigned int)maxLen);
+  for (byte i = 0; i < maxLen; ++i) {
+    EEPROM.write(start + i, i < len ? value[i] : 0);
+  }
+}
+
+bool isValidPort(const String& port) {
+  for (unsigned int i = 0; i < port.length(); ++i) {
+    if (!isDigit(port[i])) return false;
+  }
+  int portNumber = port.toInt();
+  return port.length() > 0 && port.length() <= MQTT_PORT_LEN && portNumber > 0 && portNumber <= 65535;
+}
+
+bool isValidIp(const IPAddress& ip) {
+  return ip[0] > 0 && ip[0] < 255 && ip[3] < 255;
+}
+
+bool isValidIpArg(const String& value) {
+  for (unsigned int i = 0; i < value.length(); ++i) {
+    if (!isDigit(value[i])) return false;
+  }
+  int number = value.toInt();
+  return value.length() > 0 && value.length() <= 3 && number >= 0 && number <= 255;
+}
+
+bool checkWebAuth() {
+  if (server.authenticate(webUser, appass)) return true;
+  server.requestAuthentication();
+  return false;
+}
+
+void loadSettings() {
+  essid = readEEPROMString(EEPROM_SSID, WIFI_SSID_LEN);
+  epass = readEEPROMString(EEPROM_WIFI_PASS, WIFI_PASS_LEN);
+  for (byte i = 0; i < 4; ++i) {
+    eipmqt[i] = EEPROM.read(EEPROM_MQTT_IP + i);
+  }
+  eportmqt = readEEPROMString(EEPROM_MQTT_PORT, MQTT_PORT_LEN);
+  eloginmqt = readEEPROMString(EEPROM_MQTT_LOGIN, MQTT_LOGIN_LEN);
+  epassmqt = readEEPROMString(EEPROM_MQTT_PASS, MQTT_PASS_LEN);
 }
 
 void initVar() {
@@ -210,26 +281,9 @@ void setup() {
 
   WiFi.mode(WIFI_STA);
   WiFi.hostname(deviceID);
-  EEPROM.begin(512);
+  EEPROM.begin(EEPROM_SIZE);
   delay(10);
-  // read eeprom
-  // EEPROM.commit();
-  // for (int16_t i = 0; i < 32; ++i) essid += char(EEPROM.read(i));
-  // for (int16_t i = 32; i < 64; ++i) epass += char(EEPROM.read(i));
-  // for (int16_t i = 64; i < 68; ++i) eipmqt[i - 64] = EEPROM.read(i); //чтение 4 ячеек памяти для ип адреса
-  // for (int16_t i = 96; i < 101; ++i) eportmqt += char(EEPROM.read(i));
-  // for (int16_t i = 101; i < 133; ++i) eloginmqt += char(EEPROM.read(i));
-  // for (int16_t i = 133; i < 165; ++i) epassmqt += char(EEPROM.read(i));
-
-  essid = "/n %10 Sky Net";
-  epass = "1qaz2wsx3edc4";
-  eipmqt[0] = 192;
-  eipmqt[1] = 168;
-  eipmqt[2] = 1;
-  eipmqt[3] = 200;
-  eportmqt = "1883";
-  eloginmqt = "smart";
-  epassmqt = "1qaz@WSX";
+  loadSettings();
   
   client.setServer(eipmqt, eportmqt.toInt());
   client.setCallback(callbackmqt);
@@ -241,8 +295,10 @@ void setup() {
     Serial.println(" Bytes");
     Serial.print("SSID: ");
     Serial.println(essid);
-    Serial.print("PASS: ");
-    Serial.println(epass);
+    Serial.print("MQTT server: ");
+    Serial.print(eipmqt);
+    Serial.print(":");
+    Serial.println(eportmqt);
     Serial.println (ESP.getFreeHeap());
   }
 
@@ -335,15 +391,13 @@ void setupAP() {
     Serial.print("Start AP: \"");
     Serial.print(apssid);
     Serial.println("\"");
-    Serial.print("AP Password: \"");
-    Serial.print(appass);
-    Serial.println("\"");
   }
 
 }
 
 void createWebServer() {
   server.on("/", []() {
+    if (!checkWebAuth()) return;
     String ipStr = (WiFi.localIP()).toString();
     content = "<!DOCTYPE HTML>\r\n<html><title>Setting ESP LED Lamp</title><center>Hello from ESP8266 ver ";
     content += version;
@@ -354,24 +408,24 @@ void createWebServer() {
     content += ESP.getFreeHeap();
     content += "<p>";
     content += st;
-    content += "</p><form action='setting'><label>SSID: </label><input name='ssid' length=32 value='";
+    content += "</p><form action='setting'><label>SSID: </label><input name='ssid' maxlength='32' value='";
     content += essid.c_str() + String("'>");
-    content += "<label>Pass: </label><input name = 'pass' length = 32 value ='";
+    content += "<label>Pass: </label><input type='password' name = 'pass' maxlength = '32' value ='";
     content += epass.c_str() + String("'>");
-    content += "<p><label>IP MQTT: </label><input name='ipmqt0' length=3 size='3' value='";
+    content += "<p><label>IP MQTT: </label><input name='ipmqt0' maxlength='3' size='3' value='";
     content += String(eipmqt[0]) + String("'>");
-    content += "<input name='ipmqt1' length=3 size='3' value='";
+    content += "<input name='ipmqt1' maxlength='3' size='3' value='";
     content += String(eipmqt[1]) + String("'>");
-    content += "<input name='ipmqt2' length=3 size='3' value='";
+    content += "<input name='ipmqt2' maxlength='3' size='3' value='";
     content += String(eipmqt[2]) + String("'>");
-    content += "<input name='ipmqt3' length=3 size='3' value='";
+    content += "<input name='ipmqt3' maxlength='3' size='3' value='";
     content += String(eipmqt[3]) + String("'></p>");
 
-    content += "<p><label>Port MQTT: </label><input name='portmqt' length=5 value='";
+    content += "<p><label>Port MQTT: </label><input name='portmqt' maxlength='5' value='";
     content += eportmqt.c_str() + String("'></p>");
-    content += "<p><label>Login MQTT: </label><input name='loginmqt' length=32 value='";
+    content += "<p><label>Login MQTT: </label><input name='loginmqt' maxlength='32' value='";
     content += eloginmqt.c_str() + String("'></p>");
-    content += "<p><label>Password MQTT: </label><input name='passmqt' length=32 value='";
+    content += "<p><label>Password MQTT: </label><input type='password' name='passmqt' maxlength='32' value='";
     content += epassmqt.c_str() + String("'></p>");
     content += "<input type='submit'></form>";
     content += "<form action='reboot'><p><button type='submit'>Reboot ESP</button></p></form>";
@@ -381,44 +435,58 @@ void createWebServer() {
   });
 
   server.on("/setting", []() {
+    if (!checkWebAuth()) return;
     String qssid = server.arg("ssid");
     String qpass = server.arg("pass");
+    String qip0 = server.arg("ipmqt0");
+    String qip1 = server.arg("ipmqt1");
+    String qip2 = server.arg("ipmqt2");
+    String qip3 = server.arg("ipmqt3");
     IPAddress qipmqt;
-    qipmqt[0] = (server.arg("ipmqt0")).toInt();
-    qipmqt[1] = (server.arg("ipmqt1")).toInt();
-    qipmqt[2] = (server.arg("ipmqt2")).toInt();
-    qipmqt[3] = (server.arg("ipmqt3")).toInt();
+    qipmqt[0] = qip0.toInt();
+    qipmqt[1] = qip1.toInt();
+    qipmqt[2] = qip2.toInt();
+    qipmqt[3] = qip3.toInt();
     String qportmqt = server.arg("portmqt");
     String qloginmqt = server.arg("loginmqt");
     String qpassmqt = server.arg("passmqt");
 
-    if (qssid.length() > 0 && qpass.length() > 0 && qipmqt[0] > 0 && qportmqt.length() > 0) {
-      for (int16_t i = 0; i < 165; ++i) EEPROM.write(i, 0); //стирание памяти SSID и pass
-      for (int16_t i = 0; i < qssid.length(); ++i) EEPROM.write(i, qssid[i]); //запись SSID
-      for (int16_t i = 0; i < qpass.length(); ++i) EEPROM.write(32 + i, qpass[i]); //запись пароля wifi
-      //for (int16_t i = 0; i < qipmqt.length(); ++i) EEPROM.write(64 + i, qipmqt[i]); //запись ip MQT
-      for (int16_t i = 0; i < 4; ++i) EEPROM.write(64 + i, qipmqt[i]); //запись ip MQT
-
-      for (int16_t i = 0; i < qportmqt.length(); ++i) EEPROM.write(96 + i, qportmqt[i]); //запись порта MQT
-      for (int16_t i = 0; i < qloginmqt.length(); ++i) EEPROM.write(101 + i, qloginmqt[i]); //запись логина MQT
-      for (int16_t i = 0; i < qpassmqt.length(); ++i) EEPROM.write(133 + i, qpassmqt[i]); //запись пароля MQT
+    if (qssid.length() > 0 && qssid.length() <= WIFI_SSID_LEN &&
+        qpass.length() > 0 && qpass.length() <= WIFI_PASS_LEN &&
+        qloginmqt.length() <= MQTT_LOGIN_LEN &&
+        qpassmqt.length() <= MQTT_PASS_LEN &&
+        isValidIpArg(qip0) && isValidIpArg(qip1) &&
+        isValidIpArg(qip2) && isValidIpArg(qip3) &&
+        isValidIp(qipmqt) && isValidPort(qportmqt)) {
+      for (int16_t i = 0; i < EEPROM_CONFIG_SIZE; ++i) EEPROM.write(i, 0);
+      writeEEPROMString(EEPROM_SSID, WIFI_SSID_LEN, qssid);
+      writeEEPROMString(EEPROM_WIFI_PASS, WIFI_PASS_LEN, qpass);
+      for (byte i = 0; i < 4; ++i) EEPROM.write(EEPROM_MQTT_IP + i, qipmqt[i]);
+      writeEEPROMString(EEPROM_MQTT_PORT, MQTT_PORT_LEN, qportmqt);
+      writeEEPROMString(EEPROM_MQTT_LOGIN, MQTT_LOGIN_LEN, qloginmqt);
+      writeEEPROMString(EEPROM_MQTT_PASS, MQTT_PASS_LEN, qpassmqt);
       EEPROM.commit();
       content = "{\"Success\":\"saved to eeprom... reset to boot into new wifi\"}";
       statusCode = 200;
-      restart();
     } else {
-      content = "{\"Error\":\"404 not found\"}";
-      statusCode = 404;
+      content = "{\"Error\":\"invalid settings\"}";
+      statusCode = 400;
     }
     server.send(statusCode, "application/json", content);
+    if (statusCode == 200) {
+      delay(100);
+      restart();
+    }
 
   });
   server.on("/update", HTTP_POST, []() {
+    if (!checkWebAuth()) return;
     server.sendHeader("Connection", "close");
     server.sendHeader("Access-Control-Allow-Origin", "*");
     server.send(200, "text/plain", (Update.hasError()) ? "FAIL" : "OK");
     ESP.restart();
   }, []() {
+    if (!checkWebAuth()) return;
     HTTPUpload& upload = server.upload();
     if (upload.status == UPLOAD_FILE_START) {
       Serial.setDebugOutput(true);
@@ -441,13 +509,15 @@ void createWebServer() {
     }
   });
   server.on("/cleareeprom", []() {
+    if (!checkWebAuth()) return;
     content = "<!DOCTYPE HTML>\r\n<html>";
     content += "<p>Clearing the EEPROM</p></html>";
     server.send(200, "text/html", content);
-    for (int16_t i = 0; i < 165; ++i) EEPROM.write(i, 0); //стирание настроек
+    for (int16_t i = 0; i < EEPROM_CONFIG_SIZE; ++i) EEPROM.write(i, 0); //стирание настроек
     EEPROM.commit();
   });
   server.on("/reboot", []() {
+    if (!checkWebAuth()) return;
     content = "<!DOCTYPE HTML>\r\n<html>";
     content += "<p>Reboot...</p></html>";
     server.send(200, "text/html", content);
@@ -654,7 +724,7 @@ void dRead() {
             analogWrite(pinLed2, pwmLed2);
             break;
           case 3:
-            if (pwmLed1 = pwmLed2) m = 0;
+            if (pwmLed1 == pwmLed2) m = 0;
             analogWrite(pinLed1, pwmLed1);
             analogWrite(pinLed2, pwmLed2);
             break;
@@ -699,7 +769,5 @@ void AllOff() {
 
 void restart() {
   if (DEBUG_MODE) Serial.println("Will reset and try again...");
-  ESP.reset();
+  ESP.restart();
 }
-
-
