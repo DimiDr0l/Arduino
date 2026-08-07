@@ -30,7 +30,7 @@ unsigned long last_time_sent;
 String prefix   = "/IoTmanager";     // global prefix for all topics - must be some as mobile device
 String deviceID = "mainnode";   // thing ID - unique device id in our project
 char* eloginmqt = "smart";
-char* epassmqt = "YOUR_MQTT_PASSWORD@WSX";
+char* epassmqt = "YOUR_MQTT_PASSWORD";
 String sTopic;
 //////////////////////////////////////
 #define DEBUG_MODE 1
@@ -278,6 +278,5 @@ void pubStatus(String t, String payload) {
     Serial.println("Publish new status for " + t + " FAIL!");
   }
 }
-
 
 

@@ -24,7 +24,7 @@ PubSubClient client (ethClient);
 String prefix   = "/IoTmanager";     // global prefix for all topics - must be some as mobile device
 String deviceID = "mainnode";   // thing ID - unique device id in our project
 String eloginmqt = "smart";
-String epassmqt = "YOUR_MQTT_PASSWORD@WSX";
+String epassmqt = "YOUR_MQTT_PASSWORD";
 String sTopic;
 //////////////////////////////////////
 #define DEBUG_MODE 1
@@ -215,5 +215,4 @@ void pubStatus(String t, String payload) {
 		Serial.println("Publish new status for " + t + " FAIL!");
 	}
 }
-
 
